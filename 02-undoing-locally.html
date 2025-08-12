@@ -341,11 +341,12 @@ track them, and use them during development on your local machine. Good
 habit if you do!</p>
 <p>However, in practice, many of us only run <code>git commit</code>
 right before pushing our code to the remote repository.</p>
-<p>Sometimes, you might want to change a commit — for example: - You
-accidentally included files that weren’t meant to be committed. - You
-forgot to save some changes before committing. - Something just went
-wrong and you need to fix it.</p>
-<p>If you haven’t pushed your commit yet, you only need to deal with
+<p>Sometimes, you might want to change a commit — for example:</p>
+<ul><li>You accidentally included files that weren’t meant to be
+committed.</li>
+<li>You forgot to save some changes before committing.</li>
+<li>Something just went wrong and you need to fix it.</li>
+</ul><p>If you haven’t pushed your commit yet, you only need to deal with
 your local repository — fixing things is straightforward at this
 stage.</p>
 <div id="exercise-02.1" class="callout challenge">
@@ -369,7 +370,7 @@ GitLab.com it is <code>main</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>From the GitLab GUI, select “New project/repository”</p>
 <figure><img src="fig/gitlab-new-repo.png" class="figure mx-auto d-block"></figure><p>Make it public and add README.</p>
@@ -394,7 +395,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 <p>Add them and check the status:</p>
 <pre><code>$ git add .
-kati@LAPTOP-D2GA3D2E:/mnt/c/Users/katil/Code/HIP-tutorial/gitlab-tutorial-test$ git status
+$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -438,7 +439,7 @@ changed in your commit?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>See: - <code>git log --help</code> or git log documentation -
 <code>git show --help</code> or git show documentations</p>
@@ -455,15 +456,16 @@ work.txt</code></pre>
 </section><section><h2 class="section-heading" id="undoing-things">Undoing things<a class="anchor" aria-label="anchor" href="#undoing-things"></a></h2>
 <hr class="half-width"><p>The best guide on undoing things before commit is the Git
 documentation: <a href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things" class="external-link uri">https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</a></p>
-<p>Now as we made the commit already, we need to undo it first with
-<code>git reset --soft HEAD^</code>.</p>
-<div id="exercise-02.3" class="callout challenge">
+<p>Now as we made the commit already, we can either undo it first with
+<code>git reset --soft HEAD^</code> or use the option
+<code>--amend</code>.</p>
+<div id="exercise-02.3---git-reset" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="exercise-02.3" class="callout-inner">
-<h3 class="callout-title">Exercise 02.3</h3>
+<div id="exercise-02.3---git-reset" class="callout-inner">
+<h3 class="callout-title">Exercise 02.3 - git reset</h3>
 <div class="callout-content">
 <p>Read the <a href="https://git-scm.com/docs/git-reset#Documentation/git-reset.txt-Undoacommitandredo" class="external-link">example</a>
 on how to undo a commit.</p>
@@ -478,10 +480,10 @@ or in the <code>git status</code> output how to unstage a file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <pre><code>$ git reset --soft HEAD^
-kati@LAPTOP-D2GA3D2E:/mnt/c/Users/katil/Code/HIP-tutorial/gitlab-tutorial-test$ git status
+$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -503,6 +505,115 @@ $ git commit -m " Add my work"
 </div>
 </div>
 </div>
+<div id="exercise-02.4---amend" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-02.4---amend" class="callout-inner">
+<h3 class="callout-title">Exercise 02.4 - amend</h3>
+<div class="callout-content">
+<p>In case you did the previous exercise, recreate another “junk” file
+and maybe do some changes to your other files.</p>
+<p>Stage the updates with <code>git add .</code> and commit them.</p>
+<p>Now you realise that you did not want to commit the “junk” file.</p>
+<p>Remove it from your local area and check <code>git status</code>. Do
+as instructed to update what will be committed.</p>
+<p>Use <code>git commit --amend</code> to update your commit and verify
+the commit with <code>git show</code>.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<p>You can do the following updates (or use your own):</p>
+<pre><code>$ echo "some other junk" &gt; test.out
+$ echo "Update my work" &gt;&gt; work.txt</code></pre>
+<p>Check the status:</p>
+<pre><code>$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+        modified:   work.txt
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        test.out
+
+no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
+<p>Stage your updates and commit:</p>
+<pre><code>$ git add .
+$ git commit -m "Update my work"
+[main 77b681d] Update my work
+ 2 files changed, 2 insertions(+)
+ create mode 100644 test.out</code></pre>
+<p>Whoops! That junk file ended up in your commit. Remove it and check
+the status</p>
+<pre><code>$ rm test.out
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+        deleted:    test.out
+</code></pre>
+<p>Update what will be committed as instructed:</p>
+<pre><code>$ git rm test.out
+rm 'test.out'</code></pre>
+<p>and amend your commit:</p>
+<pre><code>$ git commit --amend</code></pre>
+<p>Whoa, what’s this now?!</p>
+<pre><code>  GNU nano 4.8         [...]/gitlab-tutorial-test/.git/COMMIT_EDITMSG                    Update my work
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue Aug 12 16:44:39 2025 +0200
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 3 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#       modified:   work.txt
+#
+
+
+
+
+
+
+
+
+
+
+
+
+                                                   [ Read 14 lines ]
+^G Get Help    ^O Write Out   ^W Where Is    ^K Cut Text    ^J Justify     ^C Cur Pos     M-U Undo       M-A Mark Text
+^X Exit        ^R Read File   ^\ Replace     ^U Paste Text  ^T To Spell    ^_ Go To Line  M-E Redo       M-6 Cop</code></pre>
+<p>Not familiar with NANO? Here’s a cheatsheet if needed: <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html" class="external-link uri">https://www.nano-editor.org/dist/latest/cheatsheet.html</a></p>
+<p>If you are happy with the commit message, just hit Ctrl-X to exit and
+you will get a confirmation message of your commit.</p>
+<p>Check that your commit now has only your work file:</p>
+<pre><code>$ git show --pretty="" --name-only
+work.txt</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -510,7 +621,8 @@ $ git commit -m " Add my work"
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Git command outputs are helpful.</li>
+<ul><li>Git command outputs are helpful, in particular,
+<code>git status</code>.</li>
 <li>Git is a powerful tool with a solid documentation.</li>
 </ul></div>
 </div>
