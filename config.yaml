@@ -12,7 +12,9 @@
 # This option supports custom types so lessons can be branded
 # and themed with your own logo and alt-text (see `carpentry_description`)
 # See https://carpentries.github.io/sandpaper-docs/editing.html#adding-a-custom-logo
-carpentry: 'incubator'
+# For the record: make a "varnish" fork, add logos NNN-logo.svg, NNN-logo-sm.svg to
+# inst/pkgdown/assets/assets/images/ of the fork, and use NNN in the following (here: cmscat)
+carpentry: 'cmscat'
 
 # Alt-text description of the lesson.
 carpentry_description: 'Lesson Description'
@@ -24,7 +26,7 @@ title: 'Lesson Title' # FIXME
 created: ~ # FIXME
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'software, data, lesson, CMS' # FIXME
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -34,13 +36,13 @@ life_cycle: 'pre-alpha' # FIXME
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+source: 'https://github.com/awesome-workshop/workbench-template-md' # FIXME
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'https://cms-talk.web.cern.ch/c/physics/cat/cat-support/277' # FIXME
 
 # Navigation ------------------------------------------------
 #
@@ -81,5 +83,10 @@ profiles:
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
+
+# Add value for CMS customized "varnish"
+varnish: 'awesome-workshop/varnish'
+
+
 
 

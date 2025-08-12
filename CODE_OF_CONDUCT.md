@@ -2,12 +2,11 @@
 title: "Contributor Code of Conduct"
 ---
 
-As contributors and maintainers of this project,
-we pledge to follow the [The Carpentries Code of Conduct][coc].
+Contributors to and participants in the training provided through these lessons are expected to follow the [CERN Code of Conduct][cerncoc]
 
-Instances of abusive, harassing, or otherwise unacceptable behavior
-may be reported by following our [reporting guidelines][coc-reporting].
+This lesson is based on the material provided and maintained by [The Carpentries][carp]. 
+Take note of [The Carpentries Code of Conduct][coc].
 
-
-[coc-reporting]: https://docs.carpentries.org/policies/coc/incident-reporting.html
+[cerncoc]: https://hr.web.cern.ch/cerns-values-and-code-conduct
+[carp]: https://carpentries.org/
 [coc]: https://docs.carpentries.org/policies/coc/
