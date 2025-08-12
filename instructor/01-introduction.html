@@ -214,12 +214,21 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         1. Introduction
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#is-this-a-git-tutorial">Is this a Git tutorial?</a></li>
+<li><a href="#git-tutorials">Git tutorials</a></li>
+<li><a href="#where-do-we-start">Where do we start?</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -327,6 +336,38 @@
 </div>
 </div>
 </div>
+<section><h2 class="section-heading" id="is-this-a-git-tutorial">Is this a Git tutorial?<a class="anchor" aria-label="anchor" href="#is-this-a-git-tutorial"></a></h2>
+<hr class="half-width"><p>No, this is a hands-on session for you to exercise collaborative work
+using Git and GitLab so that you do not have to do it with your real
+projects.</p>
+<p>Take your time to do it now, not when you are busy finalizing your
+analysis code.</p>
+</section><section><h2 class="section-heading" id="git-tutorials">Git tutorials<a class="anchor" aria-label="anchor" href="#git-tutorials"></a></h2>
+<hr class="half-width"><p>Excellent Git tutorials exist, the teaching approach varies.</p>
+<ul><li>Git’s website: <a href="https://git-scm.com/doc" class="external-link uri">https://git-scm.com/doc</a>
+<ul><li>introductory videos</li>
+<li>quick reference guides</li>
+<li>reference manual</li>
+<li>Git Pro book</li>
+<li>curated external links</li>
+</ul></li>
+<li>W3 schools: <a href="https://www.w3schools.com/git/default.asp" class="external-link uri">https://www.w3schools.com/git/default.asp</a>
+<ul><li>a detailed walk-through of many Git commands</li>
+<li>instructions for using remote Git repositories (e.g. <a href="https://www.w3schools.com/git/git_remote_getstarted.asp?remote=github" class="external-link">GitHub</a>,
+<a href="https://www.w3schools.com/git/git_remote_getstarted.asp?remote=gitlab" class="external-link">GitLab</a>)</li>
+</ul></li>
+<li>CodeRefinery: <a href="https://coderefinery.github.io/git-intro/" class="external-link uri">https://coderefinery.github.io/git-intro/</a>
+<ul><li>good emphasis on “why”</li>
+<li>starts by exploring an existing GitHub repository</li>
+</ul></li>
+<li>HEP Software Foundation: <a href="https://hsf-training.github.io/analysis-essentials/git/README.html" class="external-link uri">https://hsf-training.github.io/analysis-essentials/git/README.html</a>
+<ul><li>starts by working hands-on on a local repository</li>
+<li>explains CERN GitLab features</li>
+</ul></li>
+</ul></section><section><h2 class="section-heading" id="where-do-we-start">Where do we start?<a class="anchor" aria-label="anchor" href="#where-do-we-start"></a></h2>
+<hr class="half-width"><p>For this session, you should be familiar with the basic Git workflow
+of commits and pushes to the remote repository as listed in the setup
+instructions.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -343,10 +384,7 @@
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/02-undoing-locally.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
