@@ -69,6 +69,7 @@ contact: 'https://cms-talk.web.cern.ch/c/physics/cat/cat-support/277' # FIXME
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- undoing-locally.md
 
 # Information for Learners
 learners: 
