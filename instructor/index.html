@@ -218,7 +218,16 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="01-introduction.html">1. Introduction</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="02-undoing-locally.html">2. Undoing things locally</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -266,11 +275,11 @@
         <!-- START: inst/pkgdown/templates/content-syllabus.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="../instructor/introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/introduction.html" rel="next">Next: Using Markdown... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
@@ -288,13 +297,24 @@ any links that you are not going to use.
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
- 1. <a href="introduction.html">Using Markdown</a>
+ 1. <a href="01-introduction.html">Introduction</a>
 </td>
 <td>
-How do you write a lesson using Markdown and <a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?
+What is the point of these exercises?<br>Where do I find tutorials and
+documenation on Git features?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 12m
+<span class="visually-hidden">Duration: </span>00h 05m
+</td>
+<td>
+ 2. <a href="02-undoing-locally.html">Undoing things locally</a>
+</td>
+<td>
+Phew! Luckily I haven’t pushed yet — how can I change my
+commit?<br>::::::::::::::::::::::::::::::::::::::::::::::::
+</td>
+</tr><tr><td>
+<span class="visually-hidden">Duration: </span>00h 35m
 </td>
 <td>
 Finish
@@ -307,28 +327,39 @@ any links that you are not going to use.
  --></tbody></table><p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
-      </section><section id="setup"><p>FIXME: Setup instructions live in this document. Please specify the
-tools and the data sets the Learner needs to have installed.</p>
-<section><h2 class="section-heading" id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a></h2>
-<hr class="half-width"><!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
---></section><section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
-<hr class="half-width"><div id="details" class="callout discussion">
+      </section><section id="setup"><section><h2 class="section-heading" id="gitlab-account">GitLab account<a class="anchor" aria-label="anchor" href="#gitlab-account"></a></h2>
+<hr class="half-width"><p>For these exercises, you can use the <a href="https://gitlab.cern.ch/" class="external-link">CERN GitLab instance</a> (available to
+CERN users, with the user name as your CERN login name), or an account
+on <a href="https://gitlab.com/" class="external-link">GitLab.com</a>.</p>
+</section><section><h2 class="section-heading" id="ssh-key">SSH key<a class="anchor" aria-label="anchor" href="#ssh-key"></a></h2>
+<hr class="half-width"><p>You need to authenticate to push code to the repositories. The most
+convenient is an SSH key. - Check if you have a key already and if not
+create a new one: <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key" class="external-link uri">https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key</a>
+- Add it to your account: <a href="https://gitlab.com/-/user_settings/ssh_keys" class="external-link uri">https://gitlab.com/-/user_settings/ssh_keys</a></p>
+</section><section><h2 class="section-heading" id="working-environment">Working environment<a class="anchor" aria-label="anchor" href="#working-environment"></a></h2>
+<hr class="half-width"><div id="note" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="details" class="callout-inner">
-<h3 class="callout-title">Details</h3>
+<div id="note" class="callout-inner">
+<h3 class="callout-title">Note</h3>
 <div class="callout-content">
-<p>Setup for different systems can be presented in dropdown menus via a
-<code>spoiler</code> tag. They will join to this discussion block, so
-you can give a general overview of the software used in this lesson here
-and fill out the individual operating systems (and potentially add more,
-e.g. online setup) in the solutions blocks.</p>
-</div>
+<p>We expect participants to work in a local Unix environment on their
+laptop although working through a remote connection to a central system
+such as lxplus at CERN is possible for this lesson.</p>
+<p>If you are unfamiliar with the Unix shell, you can work through the
+exercises in <a href="https://swcarpentry.github.io/shell-novice/" class="external-link">The
+Unix Shell</a> tutorial by Software Carpentry.</p>
+<p>Windows users: the Unix tutorial gives <code>git bash</code> as an
+option. However, for all work during the hands-on session:</p>
+<ul><li>do <strong>not</strong> use <code>git bash</code>
+</li>
+<li>do <strong>not</strong> use <code>Power shell</code> (apart from
+installing WSL2)</li>
+<li>activate WSL2 and <strong>use the Ubuntu terminal</strong> that
+comes with it!</li>
+</ul></div>
 </div>
 </div>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
@@ -341,7 +372,8 @@ e.g. online setup) in the solutions blocks.</p>
 </button>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
-<p>Use PuTTY</p>
+<p>Activate <a href="https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command" class="external-link">WSL2</a>
+and use the Ubuntu terminal.</p>
 </div>
 </div>
 </div>
@@ -376,16 +408,41 @@ e.g. online setup) in the solutions blocks.</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="prerequisites">Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites"></a></h2>
+<hr class="half-width"><ul><li><p>Know how to clone or create a repository</p></li>
+<li>
+<p>Have Git configured in the local environment:</p>
+<ul><li>
+<p>check with</p>
+<pre><code>git config --list</code></pre>
+</li>
+<li>
+<p>if email and name are not configured, add them with</p>
+<pre><code>git config --global user.name "[name]"
+git config --global user.email "[email address]"</code></pre>
+<p>(Replace <code>[...]</code> with your input, and keep the quotes
+around your name if there are spaces.)</p>
+</li>
+</ul></li>
+<li><p>Understand the concept of local and remote</p></li>
+<li>
+<p>Know how to add updates from the local area to the remote
+repository with the usual Git workflow, e.g.:</p>
+<pre><code>git status
+git add .
+git commit -m "Message describing your new content"
+git push origin main</code></pre>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="../instructor/introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+</li>
+</ul></section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+        <a class="chapter-link float-end" href="../instructor/01-introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/introduction.html" rel="next">Next: Using Markdown... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->
