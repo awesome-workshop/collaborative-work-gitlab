@@ -196,6 +196,7 @@ $ git commit -m " Add my work"
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ### Exercise 02.4 - amend
 
@@ -332,7 +333,7 @@ work.txt
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Git command outputs are helpful.
+- Git command outputs are helpful, in particular, `git status`.
 - Git is a powerful tool with a solid documentation.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
