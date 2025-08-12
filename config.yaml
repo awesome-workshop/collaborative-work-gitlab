@@ -20,7 +20,7 @@ carpentry: 'cmscat'
 carpentry_description: 'Lesson Description'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Collaborative work in GitLab' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: ~ # FIXME
@@ -36,7 +36,7 @@ life_cycle: 'pre-alpha' # FIXME
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/awesome-workshop/workbench-template-md' # FIXME
+source: 'https://github.com/awesome-workshop/collaborative-work-gitlab' # FIXME
 
 # Default branch of your lesson
 branch: 'main'
