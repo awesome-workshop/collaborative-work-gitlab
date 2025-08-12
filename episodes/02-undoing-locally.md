@@ -22,6 +22,7 @@ Most Git tutorials start by explaining how to make local commits, track them, an
 However, in practice, many of us only run `git commit` right before pushing our code to the remote repository.
 
 Sometimes, you might want to change a commit — for example:
+
 - You accidentally included files that weren’t meant to be committed.
 - You forgot to save some changes before committing.
 - Something just went wrong and you need to fix it.
@@ -83,7 +84,7 @@ Add them and check the status:
 
 ```
 $ git add .
-kati@LAPTOP-D2GA3D2E:/mnt/c/Users/katil/Code/HIP-tutorial/gitlab-tutorial-test$ git status
+$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -149,11 +150,11 @@ work.txt
 
 The best guide on undoing things before commit is the Git documentation: https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
 
-Now as we made the commit already, we need to undo it first with `git reset --soft HEAD^`.
+Now as we made the commit already, we can either undo it first with `git reset --soft HEAD^` or use the option `--amend`.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Exercise 02.3
+### Exercise 02.3 - git reset
 
 Read the [example](https://git-scm.com/docs/git-reset#Documentation/git-reset.txt-Undoacommitandredo) on how to undo a commit.
 
@@ -165,7 +166,7 @@ Commit with your updated changes.
 
 ```
 $ git reset --soft HEAD^
-kati@LAPTOP-D2GA3D2E:/mnt/c/Users/katil/Code/HIP-tutorial/gitlab-tutorial-test$ git status
+$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -195,6 +196,139 @@ $ git commit -m " Add my work"
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+
+### Exercise 02.4 - amend
+
+In case you did the previous exercise, recreate another "junk" file and maybe do some changes to your other files.
+
+Stage the updates with `git add .` and commit them. 
+
+Now you realise that you did not want to commit the "junk" file.
+
+Remove it from your local area and check `git status`. Do as instructed to update what will be committed.
+
+Use `git commit --amend` to update your commit and verify the commit with `git show`.
+
+
+
+:::::::::::::::: solution
+
+You can do the following updates (or use your own):
+
+```
+$ echo "some other junk" > test.out
+$ echo "Update my work" >> work.txt
+```
+
+Check the status:
+
+```
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   work.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.out
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Stage your updates and commit:
+
+```
+$ git add .
+$ git commit -m "Update my work"
+[main 77b681d] Update my work
+ 2 files changed, 2 insertions(+)
+ create mode 100644 test.out
+```
+
+Whoops! That junk file ended up in your commit. 
+Remove it and check the status
+
+```
+$ rm test.out
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    test.out
+
+```
+
+Update what will be committed as instructed:
+
+```
+$ git rm test.out
+rm 'test.out'
+```
+
+and amend your commit:
+
+```
+$ git commit --amend
+```
+
+Whoa, what's this now?!
+
+```
+  GNU nano 4.8         [...]/gitlab-tutorial-test/.git/COMMIT_EDITMSG                    Update my work
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue Aug 12 16:44:39 2025 +0200
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 3 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#       modified:   work.txt
+#
+
+
+
+
+
+
+
+
+
+
+
+
+                                                   [ Read 14 lines ]
+^G Get Help    ^O Write Out   ^W Where Is    ^K Cut Text    ^J Justify     ^C Cur Pos     M-U Undo       M-A Mark Text
+^X Exit        ^R Read File   ^\ Replace     ^U Paste Text  ^T To Spell    ^_ Go To Line  M-E Redo       M-6 Cop
+```
+
+Not familiar with NANO? Here's a cheatsheet if needed: https://www.nano-editor.org/dist/latest/cheatsheet.html
+
+If you are happy with the commit message, just hit Ctrl-X to exit and you will get a confirmation message of your commit.
+
+Check that your commit now has only your work file:
+
+```
+$ git show --pretty="" --name-only
+work.txt
+```
+
+
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
