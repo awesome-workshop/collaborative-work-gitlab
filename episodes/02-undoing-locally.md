@@ -195,3 +195,11 @@ $ git commit -m " Add my work"
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Git command outputs are helpful.
+- Git is a powerful tool with a solid documentation.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
