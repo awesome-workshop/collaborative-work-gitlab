@@ -291,6 +291,30 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-resolving-conflicts.html">5. Resolving conflicts</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-keeping-track-issues.html">6. Keep things in order</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -521,7 +545,7 @@ GitLab.com it is <code>main</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>From the GitLab GUI, select “New project/repository”</p>
 <figure><img src="../fig/gitlab-new-repo.png" class="figure mx-auto d-block"></figure><p>Make it public and add README.</p>
@@ -592,7 +616,7 @@ changed in your commit?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>See:</p>
 <ul>
@@ -642,7 +666,7 @@ or in the <code>git status</code> output how to unstage a file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <pre><code>$ git reset --soft HEAD^
 $ git status
@@ -691,7 +715,7 @@ the commit with <code>git show</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>You can do the following updates (or use your own):</p>
 <pre><code>$ echo "some other junk" &gt; test.out
@@ -1223,6 +1247,181 @@ git pull</code></pre>
 <p>Do this every time when you start a new development.</p>
 <p>You can also delete your previous branch:</p>
 <pre><code>git branch -d new-feature</code></pre>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>If the use of automated workflows is planned, it is convenient to
+work in a shared repository instead of using forks.</li>
+<li>You will use branches to contribute to the shared repository (unless
+you are the owner or the maintainer).</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-05-resolving-conflicts"><p>Content from <a href="05-resolving-conflicts.html">Resolving conflicts</a></p>
+<hr>
+<p>Last updated on 2025-08-13 |
+
+        <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/05-resolving-conflicts.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How to solve conflicts in code?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Rebasing your working branch to a recent updates in the default
+branch</li>
+<li>Solving conflicting edits in files</li>
+<li>Defining best practices for contributions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="enter-panic-mode">Enter panic mode!<a class="anchor" aria-label="anchor" href="#enter-panic-mode"></a>
+</h2>
+<hr class="half-width">
+<p>Everybody is frantically working on the same code. The owner commits
+straight to the default branch, developers push from their own branches…
+and soon, conflicts explode.</p>
+<p>To keep the battle on the code — not between people — we’ll practice
+breaking things on purpose and then fixing them.</p>
+<div id="exercise-05.1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-05.1" class="callout-inner">
+<h3 class="callout-title">Exercise 05.1</h3>
+<div class="callout-content">
+<p>Make simultaneous edits to you shared repository and learn to solve
+conflicts with confidence!</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>See <a href="https://docs.gitlab.com/user/project/merge_requests/conflicts/" class="external-link uri">https://docs.gitlab.com/user/project/merge_requests/conflicts/</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>If the use of automated workflows is planned, it is convenient to
+work in a shared repository instead of using forks.</li>
+<li>You will use branches to contribute to the shared repository (unless
+you are the owner or the maintainer).</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-06-keeping-track-issues"><p>Content from <a href="06-keeping-track-issues.html">Keep things in order</a></p>
+<hr>
+<p>Last updated on 2025-08-13 |
+
+        <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/06-keeping-track-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How to use issues to keep things in order?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Opening issues</li>
+<li>Closing issues with merge requests</li>
+<li>Defining best practices for contributions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="keeping-track-in-issues">Keeping track in issues<a class="anchor" aria-label="anchor" href="#keeping-track-in-issues"></a>
+</h2>
+<hr class="half-width">
+<div id="exercise-06.1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-06.1" class="callout-inner">
+<h3 class="callout-title">Exercise 06.1</h3>
+<div class="callout-content">
+<p>Describe a feature or a bug in an issue.</p>
+<p>Close the issue by a merge request that implements what is described
+in it.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p><a href="https://docs.gitlab.com/user/project/issues/" class="external-link uri">https://docs.gitlab.com/user/project/issues/</a></p>
+</div>
 </div>
 </div>
 </div>
