@@ -387,11 +387,21 @@ Web UI, even if you pushed only once:</p>
 area with <code>git show &lt;commit hash&gt;</code> (both short and long
 forms of the commit hash work).</p>
 <p>Now, we will exercise doing changes.</p>
-<!-- ::: callout
-Note that amending the commit with `git commit --amend` once it has been pushed the remote repository is not recommended:
-
-> Only amend commits that are still local and have not been pushed somewhere. Amending previously pushed commits and force pushing the branch will cause problems for your collaborators.
-::: -->
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Note that amending the commit with <code>git commit --amend</code>
+once it has been pushed the remote repository is not recommended:</p>
+<p><em>Only amend commits that are still local and have not been pushed
+somewhere. Amending previously pushed commits and force pushing the
+branch will cause problems for your collaborators.</em></p>
+</div>
+</div>
+</div>
 <p>Commits can be undone with <code>git revert</code>. For collaborative
 work, it is consider safer than <code>git reset</code> because
 <code>reset</code> changes the commit history.</p>
@@ -413,7 +423,7 @@ work, it is consider safer than <code>git reset</code> because
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>On your local Git area, find the last commit to undo.</p>
 <p>You will see something like this:</p>
