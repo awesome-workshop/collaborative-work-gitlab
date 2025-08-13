@@ -61,11 +61,11 @@ You can browse files on the Web UI, or inspect them in your local area with `git
 
 Now, we will exercise doing changes. 
 
-::: callout
+<!-- ::: callout
 Note that amending the commit with `git commit --amend` once it has been pushed the remote repository is not recommended:
 
 > Only amend commits that are still local and have not been pushed somewhere. Amending previously pushed commits and force pushing the branch will cause problems for your collaborators. 
-:::
+::: -->
 
 Commits can be undone with `git revert`. For collaborative work, it is consider safer than `git reset` because `reset` changes the commit history.
 
