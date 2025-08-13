@@ -8,7 +8,8 @@ For these exercises, you can use the [CERN GitLab instance](https://gitlab.cern.
 
 ## SSH key
 
-You need to authenticate to push code to the repositories. The most convenient is an SSH key.
+You need to authenticate to push code to the repositories. The most convenient is an SSH key:
+
 - Check if you have a key already and if not create a new one: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 - Add it to your account: https://gitlab.com/-/user_settings/ssh_keys
 

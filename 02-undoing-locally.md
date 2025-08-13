@@ -128,8 +128,9 @@ Can you print out just the names of the files that have been changed in your com
 :::::::::::::::: solution
 
 See:
-- `git log --help` or git log documentation
-- `git show --help` or git show documentations
+
+- `git log --help` or the [git log documentation](https://git-scm.com/docs/git-log)
+- `git show --help` or the [git show documentation](https://git-scm.com/docs/git-show).
 
 ```
 $ git log --oneline
@@ -284,7 +285,8 @@ $ git commit --amend
 Whoa, what's this now?!
 
 ```
-  GNU nano 4.8         [...]/gitlab-tutorial-test/.git/COMMIT_EDITMSG                    Update my work
+  GNU nano 4.8         [...]/gitlab-tutorial-test/.git/COMMIT_EDITMSG
+Update my work
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
@@ -317,7 +319,9 @@ Whoa, what's this now?!
 
 Not familiar with NANO? Here's a cheatsheet if needed: https://www.nano-editor.org/dist/latest/cheatsheet.html
 
-If you are happy with the commit message, just hit Ctrl-X to exit and you will get a confirmation message of your commit.
+Or change it as instructed in the [git config documentation](https://git-scm.com/book/en/v2/Appendix-C:-Git-Commands-Setup-and-Config).
+
+If you are happy with the commit message, just hit Ctrl-X to exit and you will get a confirmation message of your commit. If you want to change the message, just edit it, hit Ctrl-X and confirm with Y.
 
 Check that your commit now has only your work file:
 
