@@ -70,6 +70,8 @@ contact: 'https://cms-talk.web.cern.ch/c/physics/cat/cat-support/277' # FIXME
 episodes: 
 - 01-introduction.md
 - 02-undoing-locally.md
+- 03-undoing-remote.md
+- 04-working-together.md
 
 # Information for Learners
 learners: 

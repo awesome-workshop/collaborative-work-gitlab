@@ -266,6 +266,30 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-undoing-remote.html">3. Undoing things once pushed</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-working-together.html">4. Working together</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -421,7 +445,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-undoing-locally"><p>Content from <a href="02-undoing-locally.html">Undoing things locally</a></p>
 <hr>
-<p>Last updated on 2025-08-12 |
+<p>Last updated on 2025-08-13 |
 
         <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/02-undoing-locally.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -493,7 +517,7 @@ GitLab.com it is <code>main</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>From the GitLab GUI, select “New project/repository”</p>
 <figure><img src="fig/gitlab-new-repo.png" class="figure mx-auto d-block"></figure><p>Make it public and add README.</p>
@@ -564,10 +588,17 @@ changed in your commit?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>See: - <code>git log --help</code> or git log documentation -
-<code>git show --help</code> or git show documentations</p>
+<p>See:</p>
+<ul>
+<li>
+<code>git log --help</code> or the <a href="https://git-scm.com/docs/git-log" class="external-link">git log documentation</a>
+</li>
+<li>
+<code>git show --help</code> or the <a href="https://git-scm.com/docs/git-show" class="external-link">git show
+documentation</a>.</li>
+</ul>
 <pre><code>$ git log --oneline
 4cb5898 (HEAD -&gt; main)  Add my work
 339a972 (origin/main, origin/HEAD) Initial commit</code></pre>
@@ -607,7 +638,7 @@ or in the <code>git status</code> output how to unstage a file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <pre><code>$ git reset --soft HEAD^
 $ git status
@@ -656,7 +687,7 @@ the commit with <code>git show</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>You can do the following updates (or use your own):</p>
 <pre><code>$ echo "some other junk" &gt; test.out
@@ -702,7 +733,8 @@ rm 'test.out'</code></pre>
 <p>and amend your commit:</p>
 <pre><code>$ git commit --amend</code></pre>
 <p>Whoa, what’s this now?!</p>
-<pre><code>  GNU nano 4.8         [...]/gitlab-tutorial-test/.git/COMMIT_EDITMSG                    Update my work
+<pre><code>  GNU nano 4.8         [...]/gitlab-tutorial-test/.git/COMMIT_EDITMSG
+Update my work
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
@@ -732,8 +764,11 @@ rm 'test.out'</code></pre>
 ^G Get Help    ^O Write Out   ^W Where Is    ^K Cut Text    ^J Justify     ^C Cur Pos     M-U Undo       M-A Mark Text
 ^X Exit        ^R Read File   ^\ Replace     ^U Paste Text  ^T To Spell    ^_ Go To Line  M-E Redo       M-6 Cop</code></pre>
 <p>Not familiar with NANO? Here’s a cheatsheet if needed: <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html" class="external-link uri">https://www.nano-editor.org/dist/latest/cheatsheet.html</a></p>
+<p>Or change it as instructed in the <a href="https://git-scm.com/book/en/v2/Appendix-C:-Git-Commands-Setup-and-Config" class="external-link">git
+config documentation</a>.</p>
 <p>If you are happy with the commit message, just hit Ctrl-X to exit and
-you will get a confirmation message of your commit.</p>
+you will get a confirmation message of your commit. If you want to
+change the message, just edit it, hit Ctrl-X and confirm with Y.</p>
 <p>Check that your commit now has only your work file:</p>
 <pre><code>$ git show --pretty="" --name-only
 work.txt</code></pre>
@@ -752,6 +787,441 @@ work.txt</code></pre>
 <li>Git command outputs are helpful, in particular,
 <code>git status</code>.</li>
 <li>Git is a powerful tool with a solid documentation.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-03-undoing-remote"><p>Content from <a href="03-undoing-remote.html">Undoing things once pushed</a></p>
+<hr>
+<p>Last updated on 2025-08-13 |
+
+        <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/03-undoing-remote.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Uh-oh! I already pushed — how can I fix my commit now?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Changing without breaking.</li>
+<li>Exercise with reverting commits.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="already-pushed-and-it-went-wrong">Already pushed and it went wrong?<a class="anchor" aria-label="anchor" href="#already-pushed-and-it-went-wrong"></a>
+</h2>
+<hr class="half-width">
+<p>If you are working on your own code, you might be pushing your
+commits directly to the master/main branch.</p>
+<p>We come to the collaborative works soon, and talk about using
+branches and protecting master/main branch so that only assigned
+contributors can push to it directly. This protection is a feature of
+the Git hosting platforms like GitLab and GitHub, not a built-in feature
+of plain Git itself.</p>
+<p>For now, let us assume that you push your updates to your repository
+(or you are the one who has the right to do so in the common
+repository), so there’s no “merge request” (MR) on the GitLab side.</p>
+<p>You’ve done your commits and now you push. You can check the contents
+of your commits with <code>git show</code>.</p>
+<pre><code>$ git show --pretty="" --name-only
+work.txt</code></pre>
+<p>It is also good practice to check your remote setting before pushing,
+for example:</p>
+<pre><code>$ git remote -v
+origin  git@gitlab.com:&lt;your user name&gt;/tutorial-test.git (fetch)
+origin  git@gitlab.com:&lt;your user name&gt;/tutorial-test.git (push)</code></pre>
+<p><code>origin</code> is a shorthand for the full address which you use
+in your push:</p>
+<pre><code>$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 871 bytes | 45.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0)
+To gitlab.com:katilp/tutorial-test.git
+   339a972..d84b76a  main -&gt; main</code></pre>
+<p>You can see your separate commits listed in “History” on the GitLab
+Web UI, even if you pushed only once:</p>
+<figure><img src="fig/gitlab-commit-history.png" class="figure mx-auto d-block"></figure><p>You can browse files on the Web UI, or inspect them in your local
+area with <code>git show &lt;commit hash&gt;</code> (both short and long
+forms of the commit hash work).</p>
+<p>Now, we will exercise doing changes.</p>
+<!-- ::: callout
+Note that amending the commit with `git commit --amend` once it has been pushed the remote repository is not recommended:
+
+> Only amend commits that are still local and have not been pushed somewhere. Amending previously pushed commits and force pushing the branch will cause problems for your collaborators.
+::: -->
+<p>Commits can be undone with <code>git revert</code>. For collaborative
+work, it is consider safer than <code>git reset</code> because
+<code>reset</code> changes the commit history.</p>
+<div id="exercise-03.1---git-revert" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-03.1---git-revert" class="callout-inner">
+<h3 class="callout-title">Exercise 03.1 - git revert</h3>
+<div class="callout-content">
+<p>In the list of commits, undo a commit with
+<code>git revert &lt;commit hash&gt;</code>.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>On your local Git area, find the last commit to undo.</p>
+<p>You will see something like this:</p>
+<pre><code>$ git log --oneline
+d84b76a (HEAD -&gt; main, origin/main, origin/HEAD) Update my work.
+287cd89 Update my work
+3de58c2  Add my work
+339a972 Initial commit</code></pre>
+<p>and you can undo the latest change with</p>
+<pre><code>$ git revert d84b76a
+[main a77d646] Revert "Update my work."
+ 1 file changed, 1 deletion(-)</code></pre>
+<p>Check the status</p>
+<pre><code>$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean</code></pre>
+<p>and push</p>
+<pre><code>$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 339 bytes | 33.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To gitlab.com:katilp/tutorial-test.git
+   d84b76a..a77d646  main -&gt; main</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Once commits have been pushed to the remote repository, make your
+changes so that the commit history is kept - unless you want to modify
+it.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-04-working-together"><p>Content from <a href="04-working-together.html">Working together</a></p>
+<hr>
+<p>Last updated on 2025-08-13 |
+
+        <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/04-working-together.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How to best work on the same code?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Add contributors</li>
+<li>Understand roles</li>
+<li>Use of branches.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="lets-start-collaborating">Let’s start collaborating!<a class="anchor" aria-label="anchor" href="#lets-start-collaborating"></a>
+</h2>
+<hr class="half-width">
+<p>Now we come to the collaborative work.</p>
+<p>In general, there are two approaches:</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model" class="external-link">Fork
+and pull</a></p>
+<p><em>In the fork and pull model, anyone can fork an existing
+repository and push changes to their personal fork. You do not need
+permission to the source repository to push to a user-owned fork. The
+changes can be pulled into the source repository by the project
+maintainer. When you open a pull request proposing changes from your
+user-owned fork to a branch in the source (upstream) repository, you can
+allow anyone with push access to the upstream repository to make changes
+to your pull request. This model is popular with open source projects as
+it reduces the amount of friction for new contributors and allows people
+to work independently without upfront coordination.</em></p>
+</div>
+</div>
+</div>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#shared-repository-model" class="external-link">Shared
+repository</a></p>
+<p><em>In the shared repository model, collaborators are granted push
+access to a single shared repository and topic branches are created when
+changes need to be made. Pull requests are useful in this model as they
+initiate code review and general discussion about a set of changes
+before the changes are merged into the main development branch. This
+model is more prevalent with small teams and organizations collaborating
+on private projects.</em></p>
+</div>
+</div>
+</div>
+<p>We will be using automated workflows, some of which require
+authentication features stored as “secrets” in the repository, and they
+will not be available in forks. Therefore, we choose working on a
+<strong>shared repository</strong> where all contributors are added as
+members.</p>
+<div id="exercise-04.1---shared-repository" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-04.1---shared-repository" class="callout-inner">
+<h3 class="callout-title">Exercise 04.1 - shared repository</h3>
+<div class="callout-content">
+<p>Work in pairs or in small groups. Add all participants as a member to
+the shared repository.</p>
+<p>Choose their roles.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>In the shared repository, go to Manage -&gt; Members.</p>
+<p>In the CERN GitLab instance, you can find all CERN accounts,
+including service accounts:</p>
+<figure><img src="fig/gitlab-invite-members.png" class="figure mx-auto d-block"></figure><p>Learn about the roles.</p>
+<p>Note in particular the branch rules and protected branches, see them
+in Settings -&gt; Repository.</p>
+<p>Only owners or maintainers can push directly to the default
+branch.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="exercise-04.2---contributing-to-a-shared-repository" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-04.2---contributing-to-a-shared-repository" class="callout-inner">
+<h3 class="callout-title">Exercise 04.2 - contributing to a shared
+repository</h3>
+<div class="callout-content">
+<p>One of you is the invited member, the other is the owner. Choose the
+roles so that the less experiences Git use becomes the owner.</p>
+<p>As an invited member, clone the repository to your local
+computer.</p>
+<p>Make an update in the code, then stage and commit it. Try what
+happens if you try to push to the main branch:</p>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Pushing to a protected branch is not allowed </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>You will see a message similar to this:</p>
+<pre><code>remote: GitLab: You are not allowed to push code to protected branches on this project.
+To gitlab.com:&lt;project address&gt;
+ ! [remote rejected] HEAD -&gt; main (pre-receive hook declined)
+error: failed to push some refs to 'gitlab.com:&lt;project address&gt;'</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="exercise-04.2---contributing-to-a-shared-repository" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-04.2---contributing-to-a-shared-repository" class="callout-inner">
+<h3 class="callout-title">Exercise 04.2 - contributing to a shared
+repository<em> (continued)</em>
+</h3>
+<div class="callout-content">
+<p>Create a new branch instead.</p>
+<pre><code>git checkout -b &lt;branch name&gt;</code></pre>
+<p>Push your changes to the remote reposoitory. It will now appear as a
+merge request.</p>
+<p>As the owner, review the merge request but do not merge it yet as you
+will test it locally in the next exercise.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>Make the changes with the usual Git workflow. Note that if you have a
+local repository with the same name, you will need to define another
+local name to the newly cloned local area:</p>
+<pre><code>git clone &lt;git address&gt; &lt;local-repo-name&gt;
+cd &lt;local-repo-name&gt;</code></pre>
+<p>Create a new branch:</p>
+<pre><code>git checkout -b new-feature</code></pre>
+<p>Do the edits and then</p>
+<pre><code>git add .
+git commit -m "Describe your updates"
+git push origin new-feature </code></pre>
+<p>This will now appear as a merge request and the repository owner can
+review and merge it.</p>
+<figure><img src="fig/gitlab-merge-request.png" class="figure mx-auto d-block"></figure><p>Browse through the tabs and see the changes. Do not merge it yet as
+we continue to the next exercise to test it locally</p>
+</div>
+</div>
+</div>
+</div>
+<div id="exercise-04.3---checking-a-new-feature-branch-locally" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-04.3---checking-a-new-feature-branch-locally" class="callout-inner">
+<h3 class="callout-title">Exercise 04.3 - checking a new feature branch
+locally</h3>
+<div class="callout-content">
+<p>As the project owner or maintainer, test the new feature locally. You
+would do this, for example, to run some code locally to see if it works
+as expected.</p>
+<p>Use <code>git fetch origin</code> to get the latest changes and then
+checkout the new branch.</p>
+<p>Once tested, merge the request on the GitLab Web UI and delete your
+local branch.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>Retreive the status of the remote repository so that you know the new
+branch name.</p>
+<pre><code>$ git fetch origin
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 11 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (11/11), 1.67 KiB | 25.00 KiB/s, done.
+From gitlab.com:&lt;project address&gt;
+   395b0d5..6372999  main       -&gt; origin/main
+ * [new branch]      file4      -&gt; origin/file4</code></pre>
+<p>Checkout the branch with</p>
+<pre><code>git checkout -b file4 origin/file4</code></pre>
+<p>To test, you might run some code locally. You can delete this local
+branch after testing. You may need option <code>-D</code> to force
+it.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="remember-to-update-your-local-mainmaster-branch" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="remember-to-update-your-local-mainmaster-branch" class="callout-inner">
+<h3 class="callout-title">Remember to update your local main/master
+branch!!!</h3>
+<div class="callout-content">
+<p>After a merge request have been merged, remember to update your local
+default branch.</p>
+<pre><code>git checkout main
+git pull</code></pre>
+<p>Do this every time when you start a new development.</p>
+<p>You can also delete your previous branch:</p>
+<pre><code>git branch -d new-feature</code></pre>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>If the use of automated workflows is planned, it is convenient to
+work in a shared repository instead of using forks.</li>
+<li>You will use branches to contribute to the shared repository (unless
+you are the owner or the maintainer).</li>
 </ul>
 </div>
 </div>
@@ -807,9 +1277,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://awesome-workshop.github.io/collaborative-work-gitlab/aio.html",
   "identifier": "https://awesome-workshop.github.io/collaborative-work-gitlab/aio.html",
-  "dateCreated": "2025-08-12",
-  "dateModified": "2025-08-12",
-  "datePublished": "2025-08-12"
+  "dateCreated": "2025-08-13",
+  "dateModified": "2025-08-13",
+  "datePublished": "2025-08-13"
 }
 
   </script><script>
