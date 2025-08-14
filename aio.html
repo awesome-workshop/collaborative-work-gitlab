@@ -305,7 +305,19 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-keeping-track-issues.html">6. Keep things in order</a>
+        <a href="06-keeping-track-issues.html">6. Keeping things in order</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-gitlab-cicd-pipeline-basics.html">7. Automate testing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -541,7 +553,7 @@ GitLab.com it is <code>main</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>From the GitLab GUI, select “New project/repository”</p>
 <figure><img src="fig/gitlab-new-repo.png" class="figure mx-auto d-block"></figure><p>Make it public and add README.</p>
@@ -612,7 +624,7 @@ changed in your commit?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>See:</p>
 <ul>
@@ -662,7 +674,7 @@ or in the <code>git status</code> output how to unstage a file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <pre><code>$ git reset --soft HEAD^
 $ git status
@@ -711,7 +723,7 @@ the commit with <code>git show</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>You can do the following updates (or use your own):</p>
 <pre><code>$ echo "some other junk" &gt; test.out
@@ -928,7 +940,7 @@ work, it is consider safer than <code>git reset</code> because
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>On your local Git area, find the last commit to undo.</p>
 <p>You will see something like this:</p>
@@ -1086,7 +1098,7 @@ the shared repository.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>In the shared repository, go to Manage -&gt; Members.</p>
 <p>In the CERN GitLab instance, you can find all CERN accounts,
@@ -1096,6 +1108,22 @@ including service accounts:</p>
 in Settings -&gt; Repository.</p>
 <p>Only owners or maintainers can push directly to the default
 branch.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Pushing to a protected branch is not allowed </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>You will see a message similar to this:</p>
+<pre><code>remote: GitLab: You are not allowed to push code to protected branches on this project.
+To gitlab.com:&lt;project address&gt;
+! [remote rejected] HEAD -&gt; main (pre-receive hook declined)
+error: failed to push some refs to 'gitlab.com:&lt;project address&gt;'</code></pre>
 </div>
 </div>
 </div>
@@ -1113,20 +1141,12 @@ repository</h3>
 roles so that the less experiences Git use becomes the owner.</p>
 <p>As an invited member, clone the repository to your local
 computer.</p>
-<p>Make an update in the code, then stage and commit it. Try what
-happens if you try to push to the main branch:</p>
-<p>:::::::::::::::: spoiler</p>
-<p>### Pushing to a protected branch is not allowed</p>
-<p>You will see a message similar to this:</p>
-<pre><code>remote: GitLab: You are not allowed to push code to protected branches on this project.
-To gitlab.com:&lt;project address&gt;
-! [remote rejected] HEAD -&gt; main (pre-receive hook declined)
-error: failed to push some refs to 'gitlab.com:&lt;project address&gt;'</code></pre>
-<p>::::::::::::::::::::::::</p>
-<p>Create a new branch instead.</p>
+<p>Create a new branch as you will not be able to push to the protected
+default branch.</p>
 <pre><code>git checkout -b &lt;branch name&gt;</code></pre>
-<p>Push your changes to the remote reposoitory. It will now appear as a
-merge request.</p>
+<p>Make an update in the code, then stage and commit it. Push your
+changes to the remote reposoitory. It will now appear as a merge
+request.</p>
 <p>As the owner, review the merge request but do not merge it yet as you
 will test it locally in the next exercise.</p>
 </div>
@@ -1137,7 +1157,7 @@ will test it locally in the next exercise.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Make the changes with the usual Git workflow. Note that if you have a
 local repository with the same name, you will need to define another
@@ -1153,7 +1173,7 @@ git push origin new-feature </code></pre>
 <p>This will now appear as a merge request and the repository owner can
 review and merge it.</p>
 <figure><img src="fig/gitlab-merge-request.png" class="figure mx-auto d-block"></figure><p>Browse through the tabs and see the changes. Do not merge it yet as
-we continue to the next exercise to test it locally</p>
+we continue to the next exercise to test it locally.</p>
 </div>
 </div>
 </div>
@@ -1182,7 +1202,7 @@ local branch.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Retreive the status of the remote repository so that you know the new
 branch name.</p>
@@ -1197,9 +1217,9 @@ From gitlab.com:&lt;project address&gt;
  * [new branch]      file4      -&gt; origin/file4</code></pre>
 <p>Checkout the branch with</p>
 <pre><code>git checkout -b file4 origin/file4</code></pre>
-<p>To test, you might run some code locally. You can delete this local
-branch after testing. You may need option <code>-D</code> to force
-it.</p>
+<p>To test, you might run some code locally. If it looks OK, merge the
+merge request on the GitLab Web UI. You can delete this local branch
+after testing. You may need option <code>-D</code> to force it.</p>
 </div>
 </div>
 </div>
@@ -1307,7 +1327,7 @@ contents of the updated remote.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>See <a href="https://git-scm.com/docs/git-rebase" class="external-link uri">https://git-scm.com/docs/git-rebase</a></p>
 </div>
@@ -1351,7 +1371,7 @@ command line tools.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>See <a href="https://docs.gitlab.com/user/project/merge_requests/conflicts/" class="external-link uri">https://docs.gitlab.com/user/project/merge_requests/conflicts/</a></p>
 </div>
@@ -1379,7 +1399,7 @@ work.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-06-keeping-track-issues"><p>Content from <a href="06-keeping-track-issues.html">Keep things in order</a></p>
+</section></section><section id="aio-06-keeping-track-issues"><p>Content from <a href="06-keeping-track-issues.html">Keeping things in order</a></p>
 <hr>
 <p>Last updated on 2025-08-14 |
 
@@ -1417,18 +1437,28 @@ any links that you are not going to use.
 <section><h2 class="section-heading" id="keeping-things-in-order">Keeping things in order<a class="anchor" aria-label="anchor" href="#keeping-things-in-order"></a>
 </h2>
 <hr class="half-width">
-<p>Whether a personal project of your own, or a shared repository,
-keeping track of things to do in issues is a good practice.</p>
-<p>They are helpful to inform all contributors of things missing, work
-in progress or discussion. They can also be used to report bugs.</p>
-<p>Issues can be assigned to project members, and they can be closed by
-merge requests. The closing can be automated through merge requests by
-using <code>closes #&lt;issue number&gt;</code> in the commit message.
-Similary, <code>... #&lt;issue number&gt;</code> connects a commit to an
+<p>Whether it’s a personal project of your own or a shared repository,
+keeping track of tasks in issues is a good practice.</p>
+<p>Issues help inform all contributors about missing features, work in
+progress, or topics for discussion. They can also be used to report
+bugs. GitLab lets you select from three different types of issues —
+Incident, Issue, or Task — but these only differ if you have defined
+separate templates to guide contributors in providing useful
+information.</p>
+<p>Issues can be assigned to project members closed through merge
+requests. The <a href="https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically" class="external-link">closing
+can be automated</a> by using <code>closes #&lt;issue number&gt;</code>
+in the commit message. Similarly,
+<code>related to #&lt;issue number&gt;</code> links a commit to an
 issue, which helps tracking progress.</p>
-<p>Issues can be labeled based on their content, difficulty, urgency, or
-status of work in progress. These labels are helpful in search in large
-projects.</p>
+<p>Issues can be labeled based on their content, difficulty, urgency,
+status of work in progress, or other properties. The labels can be
+defined for each project separately, and a default set of labels can be
+easily generated from <strong>Manage -&gt; Labels</strong>. Labels are
+helpful in search in large projects.</p>
+<p>Issues can be viewed in an issue board, and be connected to a
+milestone. They can be set up <strong>Plan -&gt; Issue boards</strong>
+and <strong>Plan -&gt; Milestones</strong>.</p>
 <div id="remember-to-update-your-local-mainmaster-branch" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1466,7 +1496,7 @@ satisfied.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><a href="https://docs.gitlab.com/user/project/issues/" class="external-link uri">https://docs.gitlab.com/user/project/issues/</a></p>
 </div>
@@ -1496,9 +1526,9 @@ tracking is helpful even in that case.</p>
 <div id="exercise-06.2" class="callout-inner">
 <h3 class="callout-title">Exercise 06.2</h3>
 <div class="callout-content">
-<p>Make a quick list of the work you have planned for your code. For
-real, not for the exercise repository we have been working on.</p>
-<p>Could you add them as issues to the code repository?</p>
+<p>Explore setting up and using an Issue board. In addition to the
+default “Open” and “Closed” lists, add some others, for example “In
+progress” and “Help needed”.</p>
 </div>
 </div>
 </div>
@@ -1507,7 +1537,35 @@ real, not for the exercise repository we have been working on.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Follow <strong>Plan -&gt; Issue boards</strong>.</p>
+<p>To add lists, you will first have to define the corresponding labels
+from <strong>Plan -&gt; Issues</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="exercise-06.3" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-06.3" class="callout-inner">
+<h3 class="callout-title">Exercise 06.3</h3>
+<div class="callout-content">
+<p>Make a quick list of the work you have planned for your code. For
+real, not for the exercise repository we have been working on.</p>
+<p>Could you add them as issues to the code repository?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>That’s on you and we come back to this at the end of the day!</p>
 </div>
@@ -1526,6 +1584,264 @@ real, not for the exercise repository we have been working on.</p>
 discussion for code development in a repository.</li>
 <li>Issues are helpful for tracking the progress and sharing the
 work.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-07-gitlab-cicd-pipeline-basics"><p>Content from <a href="07-gitlab-cicd-pipeline-basics.html">Automate testing</a></p>
+<hr>
+<p>Last updated on 2025-08-14 |
+
+        <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/07-gitlab-cicd-pipeline-basics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How to automate testing of code updates?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Understand basic GitLab CI/CD pipeline concepts</li>
+<li>Run your first CI/CD pipeline</li>
+<li>Define a test</li>
+<li>Use artifacts</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="gitlab-cicd-pipelines">GitLab CI/CD pipelines<a class="anchor" aria-label="anchor" href="#gitlab-cicd-pipelines"></a>
+</h2>
+<hr class="half-width">
+<p>CI/CD stands for Continuous Integration and Continuous Delivery. It
+means that updates are frequently integrated into the codebase and their
+functionality is tested, so the software is close to “deliverable” at
+any point in time.</p>
+<p><a href="https://docs.gitlab.com/ci/pipelines/" class="external-link">CI/CD pipelines</a>
+are automated workflows that can be configured to run when new code is
+updated, or scheduled to run at regular intervals.</p>
+<p>When developers push code to GitLab, they can define automated tasks
+in a <code>.gitlab-ci.yml</code> file. These tasks might include running
+tests, building applications, or deploying code. GitLab Runner is the
+application that executes these tasks on computing infrastructure.
+GitLab.com offers computing infrastructure for these tasks, and the CERN
+GitLab instance has access to dedicated infrastructure at CERN.</p>
+<p><code>yml</code> (or sometimes <code>yaml</code>) is quite commonly
+used language in various workflow definitions and fairly easy to read
+and understand. Keep in mind, however, that correct indentation is
+crucial, as YAML uses indentation to define structure. .</p>
+<p>We will first have a look at the template that GitLab suggests in the
+“Pipeline editor”.</p>
+<div id="exercise-07.1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-07.1" class="callout-inner">
+<h3 class="callout-title">Exercise 07.1</h3>
+<div class="callout-content">
+<p>On the exercise repository, follow <strong>Build -&gt; Pipeline
+editor</strong> and click on “Configure pipeline”</p>
+<p>Inspect it, commit it and follow <strong>Build -&gt;
+Pipelines</strong> to see it running.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>While inspecting, observe:</p>
+<ul>
+<li>stages with default names <code>build</code>, <code>test</code> and
+<code>deploy</code>, see <a href="https://docs.gitlab.com/ci/yaml/#stages" class="external-link uri">https://docs.gitlab.com/ci/yaml/#stages</a>
+</li>
+<li>that this a typical software industry pipeline structure that builds
+a tool that is then deployed</li>
+<li>scripts usually consist of shell commands (or scripts)</li>
+</ul>
+<p>Once done you will see something like this:</p>
+<figure><img src="fig/gitlab-default-pipeline.png" class="figure mx-auto d-block"></figure>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="exit-codes">Exit codes<a class="anchor" aria-label="anchor" href="#exit-codes"></a>
+</h2>
+<hr class="half-width">
+<p>Remember that in the earlier exercises, the repository owner pulled
+the new feature branch locally to test it. This process could also be
+done automatically.</p>
+<p>To do that, we need a test that either passes or fails, which the
+pipeline can interpret.</p>
+<p>Unix exit codes can be used for this purpose. Every command returns
+an exit code — 0 for success or greater than 0 for failure. You can
+display the exit code of the last command in the terminal with
+<code>echo $?</code>.</p>
+<p>You can make a script to stop at the first command that returns a
+non-zero exit code with <code>set -e</code>.</p>
+<p>You can read more about exit codes in the <a href="https://hsf-training.github.io/hsf-training-cicd/02-enter-sandman/index.html" class="external-link">HSF
+GitLab tutorial</a>.</p>
+<div id="exercise-07.2" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-07.2" class="callout-inner">
+<h3 class="callout-title">Exercise 07.2</h3>
+<div class="callout-content">
+<p>Exercise with shell commands. Exercise with a python test or a shell
+script.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>Type <code>echo $?</code> after a command on your terminal.</p>
+<p>Write a bash script <code>test.sh</code> with some commands in it.
+Test what happens when you run the script.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Now we go back to the exercise repository, so just a reminder:</p>
+<div id="remember-to-update-your-local-mainmaster-branch" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="remember-to-update-your-local-mainmaster-branch" class="callout-inner">
+<h3 class="callout-title">Remember to update your local main/master
+branch!!!</h3>
+<div class="callout-content">
+<p>Always remember to update your local default branch.</p>
+<pre><code>git checkout main
+git pull</code></pre>
+<p>Do this every time when you start a new development.</p>
+</div>
+</div>
+</div>
+<div id="exercise-07.3" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-07.3" class="callout-inner">
+<h3 class="callout-title">Exercise 07.3</h3>
+<div class="callout-content">
+<p>Add a test to the pipeline template. The repository files are
+available in the jobs. You could test, for example, the contents of the
+files in the repository, or some other functionality. Keep it simple,
+we’ll get to the real work soon.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>Replace the default <code>echo ...</code> and <code>sleep ...</code>
+commands in the <code>.gitlab-ci.yml</code> file with test commands of
+your own. You can also add a test script and run it.</p>
+<pre><code></code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="artifacts">Artifacts<a class="anchor" aria-label="anchor" href="#artifacts"></a>
+</h2>
+<hr class="half-width">
+<p>In physics analysis, the outcome of the workflow — for example, a
+result file or a plot — is the best indicator that the code works as
+expected.</p>
+<p>Such outcomes can be defined as artifacts in GitLab CI/CD pipelines,
+and they can be accessed through the GitLab Web UI.</p>
+<p>You can define artifacts in the <code>.gitlab-ci-yml</code> file, and
+they are by default available to all stages of the pipeline. Note that
+artifacts cannot be modified, so if you plan to use the output of one
+step and modify it in a subsequent step, you will need to make a local
+copy of it in that job.</p>
+<div id="exercise-07.4" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-07.4" class="callout-inner">
+<h3 class="callout-title">Exercise 07.4</h3>
+<div class="callout-content">
+<p>Add an artifact to your CI/CD pipeline.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div class="accordion-body">
+<p>You can use something similar to this:</p>
+<pre><code>  script:
+    - mkdir -p outputs
+    - echo "Compiling the code..." &gt; outputs/build.txt
+    - echo "Compile complete." &gt;&gt; outputs/build.txt
+  artifacts:
+    paths:
+      - outputs/</code></pre>
+<p>You can check in the subsequent job scripts that what you write in
+the <code>outputs</code> directory is visible. Only the jobs that have
+the <code>artifacts:</code> keyword, store them as artifacts to be
+downloaded. However, even if without the keyword, the
+<code>outputs</code> directory is available in all jobs.</p>
+<p>You can download the artifacts from the Pipeline view:</p>
+<figure><img src="fig/gitlab-download-artifacts.png" class="figure mx-auto d-block"></figure><p>or browse them by clicking on a single job, and following
+“Browse”:</p>
+<figure><img src="fig/gitlab-browse-artifacts.png" class="figure mx-auto d-block"></figure>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>GitLab CI/CD pipelines are useful to test the functionality of the
+code updates.</li>
+<li>They can perform decicated tests or procude a sample output which
+can indicate that the code works as expected.</li>
 </ul>
 </div>
 </div>

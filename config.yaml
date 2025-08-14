@@ -74,6 +74,7 @@ episodes:
 - 04-working-together.md
 - 05-resolving-conflicts.md
 - 06-keeping-track-issues.md
+- 07-gitlab-cicd-pipeline-basics.md
 
 # Information for Learners
 learners: 
