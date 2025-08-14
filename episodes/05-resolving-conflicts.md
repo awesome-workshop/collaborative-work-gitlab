@@ -1,7 +1,7 @@
 ---
 title: "Resolving conflicts"
 teaching: 10
-exercises: 20
+exercises: 40
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

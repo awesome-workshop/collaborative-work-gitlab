@@ -20,33 +20,40 @@ exercises: 20
 
 ## GitLab CI/CD pipelines
 
-CI/CD stands for Continuous Integration / Continuous Deployment/Development.
-It means that all updates are immediately integrated to the codebase and their functionality is tested.
+CI/CD stands for Continuous Integration and Continuous Delivery.
+It means that updates are frequently integrated into the codebase and their functionality is tested, so the software is close to "deliverable" at any point in time.
 
-CI/CD pipelines are automated workflows that can be set to run on every push.
-They can also be scheduled at regular intervals.
 
-In GitLab, these workflows are defined in a file called `.gitlab-ci.yml`.
+[CI/CD pipelines](https://docs.gitlab.com/ci/pipelines/) 
+are automated workflows that can be configured to run when new code is updated, or scheduled to run at regular intervals.
 
-`yml` (or sometimes `yaml`) stands for "yet another markup language"... It is quite commonly used in various workflow definitions and fairly easy to read and understand.
-Keep in mind, however, that intending counts.
+When developers push code to GitLab, they can define automated tasks in a `.gitlab-ci.yml` file. These tasks might include running tests, building applications, or deploying code. GitLab Runner is the application that executes these tasks on computing infrastructure. GitLab.com offers computing infrastructure for these tasks, and the CERN GitLab instance has access to dedicated infrastructure at CERN.
 
-We will first have a look at the template that GitLab suggest in the "Pipeline editor".
+`yml` (or sometimes `yaml`) is quite commonly used language in various workflow definitions and fairly easy to read and understand.
+Keep in mind, however, that correct indentation is crucial, as YAML uses indentation to define structure.
+.
+
+We will first have a look at the template that GitLab suggests in the "Pipeline editor".
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ### Exercise 07.1
 
-On the exercise repository, follow Build -> Pipeline editor and click on ...
+On the exercise repository, follow **Build -> Pipeline editor** and click on "Configure pipeline"
 
-Inspect it, save it and follow ... to see it running.
+Inspect it, commit it and follow **Build -> Pipelines** to see it running.
 
 :::::::::::::::: solution
 
 While inspecting, observe:
 
-- stages with default names `build`, `test` and `deploy`, see...
+- stages with default names `build`, `test` and `deploy`, see https://docs.gitlab.com/ci/yaml/#stages
 - that this a typical software industry pipeline structure that builds a tool that is then deployed
+- scripts usually consist of shell commands (or scripts)
+
+Once done you will see something like this:
+
+![](fig/gitlab-default-pipeline.png)
 
 
 :::::::::::::::::::::::::
@@ -54,25 +61,28 @@ While inspecting, observe:
 
 ## Exit codes
 
-Remember that in the earlier exercises, the repository owner pulled the new feature branch to test it locally. This is something that could be done in an automated manner.
+Remember that in the earlier exercises, the repository owner pulled the new feature branch locally to test it. This process could also be done automatically.
 
-However, for that we need a test that either succeeds or fails so that the pipeline can interpret it.
+To do that, we need a test that either passes or fails, which the pipeline can interpret.
 
-Unix exit codes can be used for that. For any command, there's an exit code - either 0 for success or > 0 for failure. `echo $?` gives the exit code of the last command on a terminal. 
+Unix exit codes can be used for this purpose. Every command returns an exit code — 0 for success or greater than 0 for failure. You can display the exit code of the last command in the terminal with `echo $?`.
 
-Scripts normally fail at the first command giving a non-zero exit code.
+You can make a script to stop at the first command that returns a non-zero exit code with `set -e`.
 
+You can read more about exit codes in the [HSF GitLab tutorial](https://hsf-training.github.io/hsf-training-cicd/02-enter-sandman/index.html).
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ### Exercise 07.2
 
-Read about exit codes in  .
 Exercise with shell commands.
 Exercise with a python test or a shell script.
 
 :::::::::::::::: solution
 
+Type `echo $?` after a command on your terminal.
+
+Write a bash script `test.sh` with some commands in it. Test what happens when you run the script.
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
@@ -99,26 +109,32 @@ Do this every time when you start a new development.
 ### Exercise 07.3
 
 Add a test to the pipeline template.
-You could test the contents of the files in the repository, or some other functionality.
+The repository files are available in the jobs.
+You could test, for example, the contents of the files in the repository, or some other functionality.
 Keep it simple, we'll get to the real work soon.
+
 
 
 :::::::::::::::: solution
 
+Replace the default `echo ...` and `sleep ...` commands in the `.gitlab-ci.yml` file with test commands of your own. You can also add a test script and run it.
 
+```
+
+```
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Artifacts
 
-In physics analysis, the outcome of the workflow, e.g. a result file or a plot, is the best indicator that the code works as expected. 
+In physics analysis, the outcome of the workflow — for example, a result file or a plot — is the best indicator that the code works as expected.
 
-Such outcomes can be defined as "artifacts" in GitLab CI/CD pipelines and they can be accessed through the GitLab Web UI.
+Such outcomes can be defined as artifacts in GitLab CI/CD pipelines, and they can be accessed through the GitLab Web UI.
 
-For example, the job log file is always available, see the output of the previous pipelines.
 
-You can define additional artifacts, and they are by default available to all stages of the pipeline. Note that artifacts cannot be modified so if you plan to use output of a step and modify it in the subsequent step, you will need to make a local copy of it in that job.
+You can define artifacts in the `.gitlab-ci-yml` file, and they are by default available to all stages of the pipeline. Note that artifacts cannot be modified, so if you plan to use the output of one step and modify it in a subsequent step, you will need to make a local copy of it in that job.
+
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
@@ -126,10 +142,31 @@ You can define additional artifacts, and they are by default available to all st
 ### Exercise 07.4
 
 Add an artifact to your CI/CD pipeline.
-Download it from the GitLab Web UI.
-
 
 :::::::::::::::: solution
+
+You can use something similar to this:
+
+```
+  script:
+    - mkdir -p outputs
+    - echo "Compiling the code..." > outputs/build.txt
+    - echo "Compile complete." >> outputs/build.txt
+  artifacts:
+    paths:
+      - outputs/
+```
+
+You can check in the subsequent job scripts that what you write in the `outputs` directory is visible. Only the jobs that have the `artifacts:` keyword, store them as artifacts to be downloaded. However, even if without the keyword, the `outputs` directory is available in all jobs.
+
+You can download the artifacts from the Pipeline view:
+
+![](fig/gitlab-download-artifacts.png)
+
+or browse them by clicking on a single job, and following "Browse":
+
+![](fig/gitlab-browse-artifacts.png)
+
 
 
 
@@ -141,7 +178,6 @@ Download it from the GitLab Web UI.
 
 - GitLab CI/CD pipelines are useful to test the functionality of the code updates.
 - They can perform decicated tests or procude a sample output which can indicate that the code works as expected.
-
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
