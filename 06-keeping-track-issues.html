@@ -269,7 +269,7 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#keeping-track-in-issues">Keeping track in issues</a></li>
+        <ul><li><a href="#keeping-things-in-order">Keeping things in order</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -334,7 +334,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Keep things in order</h1>
-        <p>Last updated on 2025-08-13 |
+        <p>Last updated on 2025-08-14 |
 
         <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/06-keeping-track-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -369,8 +369,36 @@
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="keeping-track-in-issues">Keeping track in issues<a class="anchor" aria-label="anchor" href="#keeping-track-in-issues"></a></h2>
-<hr class="half-width"><div id="exercise-06.1" class="callout challenge">
+<section><h2 class="section-heading" id="keeping-things-in-order">Keeping things in order<a class="anchor" aria-label="anchor" href="#keeping-things-in-order"></a></h2>
+<hr class="half-width"><p>Whether a personal project of your own, or a shared repository,
+keeping track of things to do in issues is a good practice.</p>
+<p>They are helpful to inform all contributors of things missing, work
+in progress or discussion. They can also be used to report bugs.</p>
+<p>Issues can be assigned to project members, and they can be closed by
+merge requests. The closing can be automated through merge requests by
+using <code>closes #&lt;issue number&gt;</code> in the commit message.
+Similary, <code>... #&lt;issue number&gt;</code> connects a commit to an
+issue, which helps tracking progress.</p>
+<p>Issues can be labeled based on their content, difficulty, urgency, or
+status of work in progress. These labels are helpful in search in large
+projects.</p>
+<div id="remember-to-update-your-local-mainmaster-branch" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="remember-to-update-your-local-mainmaster-branch" class="callout-inner">
+<h3 class="callout-title">Remember to update your local main/master
+branch!!!</h3>
+<div class="callout-content">
+<p>Always remember to update your local default branch.</p>
+<pre><code>git checkout main
+git pull</code></pre>
+<p>Do this every time when you start a new development.</p>
+</div>
+</div>
+</div>
+<div id="exercise-06.1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -378,9 +406,11 @@
 <div id="exercise-06.1" class="callout-inner">
 <h3 class="callout-title">Exercise 06.1</h3>
 <div class="callout-content">
-<p>Describe a feature or a bug in an issue.</p>
-<p>Close the issue by a merge request that implements what is described
-in it.</p>
+<p>As the owner of the exercise repository, describe a desired new
+feature in an issue. Assign it to a developer (that’s your exercise
+buddy). Let them make the changes suggested in the issue and push it in
+a branch. Review the merge request and merge it if you are
+satisfied.</p>
 </div>
 </div>
 </div>
@@ -389,9 +419,50 @@ in it.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><a href="https://docs.gitlab.com/user/project/issues/" class="external-link uri">https://docs.gitlab.com/user/project/issues/</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="issues-are-helpful-also-for-single-contributor-repositories" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="issues-are-helpful-also-for-single-contributor-repositories" class="callout-inner">
+<h3 class="callout-title">Issues are helpful also for single-contributor
+repositories</h3>
+<div class="callout-content">
+<p>In practice, for small projects, if you are the only contributor to
+your repository you would close your own issues. Nevetheless, issue
+tracking is helpful even in that case.</p>
+</div>
+</div>
+</div>
+<div id="exercise-06.2" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-06.2" class="callout-inner">
+<h3 class="callout-title">Exercise 06.2</h3>
+<div class="callout-content">
+<p>Make a quick list of the work you have planned for your code. For
+real, not for the exercise repository we have been working on.</p>
+<p>Could you add them as issues to the code repository?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>That’s on you and we come back to this at the end of the day!</p>
 </div>
 </div>
 </div>
@@ -403,10 +474,10 @@ in it.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>If the use of automated workflows is planned, it is convenient to
-work in a shared repository instead of using forks.</li>
-<li>You will use branches to contribute to the shared repository (unless
-you are the owner or the maintainer).</li>
+<ul><li>Issue tracker in GitLab is a convenient tool for a centralised
+discussion for code development in a repository.</li>
+<li>Issues are helpful for tracking the progress and sharing the
+work.</li>
 </ul></div>
 </div>
 </div>
@@ -471,9 +542,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://awesome-workshop.github.io/collaborative-work-gitlab/06-keeping-track-issues.html",
   "identifier": "https://awesome-workshop.github.io/collaborative-work-gitlab/06-keeping-track-issues.html",
-  "dateCreated": "2025-08-13",
-  "dateModified": "2025-08-13",
-  "datePublished": "2025-08-13"
+  "dateCreated": "2025-08-14",
+  "dateModified": "2025-08-14",
+  "datePublished": "2025-08-14"
 }
 
   </script><script>
