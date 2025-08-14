@@ -80,20 +80,20 @@ As an invited member, clone the repository to your local computer.
 Make an update in the code, then stage and commit it.
 Try what happens if you try to push to the main branch:
 
-:::::::::::::::: spoiler
+  :::::::::::::::: spoiler
 
-### Pushing to a protected branch is not allowed
+  ### Pushing to a protected branch is not allowed
 
-You will see a message similar to this:
+  You will see a message similar to this:
 
-```
-remote: GitLab: You are not allowed to push code to protected branches on this project.
-To gitlab.com:<project address>
- ! [remote rejected] HEAD -> main (pre-receive hook declined)
-error: failed to push some refs to 'gitlab.com:<project address>'
-```
+  ```
+  remote: GitLab: You are not allowed to push code to protected branches on this project.
+  To gitlab.com:<project address>
+  ! [remote rejected] HEAD -> main (pre-receive hook declined)
+  error: failed to push some refs to 'gitlab.com:<project address>'
+  ```
 
-::::::::::::::::::::::::
+  ::::::::::::::::::::::::
 
 Create a new branch instead.
 

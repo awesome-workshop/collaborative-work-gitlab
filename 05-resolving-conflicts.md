@@ -19,18 +19,51 @@ exercises: 20
 
 ## Enter panic mode!
 
-Everybody is frantically working on the same code. The owner commits straight to the default branch, developers push from their own branches… and soon, conflicts explode.
+Everybody is frantically working on the code repository. The owner commits straight to the default branch, developers push from their own branches… and soon, conflicts explode.
 
-To keep the battle on the code — not between people — we’ll practice breaking things on purpose and then fixing them.
-
-
+To keep the conflict on the code — not between people — we’ll practice breaking things on purpose and then fixing them.
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ### Exercise 05.1
 
-Make simultaneous edits to you shared repository and learn to solve conflicts with confidence!
+Exercise with your pair to add content to you shared repository in two different branches. Learn how to update your working branch with contents of the updated remote.
+
+Use `git rebase`.
+
+:::::::::::::::: solution
+
+See https://git-scm.com/docs/git-rebase
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: callout
+### Remember to update your local main/master branch!!!
+
+Always remember to update your local default branch.
+
+```
+git checkout main
+git pull
+```
+
+Do this every time when you start a new development.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Exercise 05.2
+
+With your pair, make local edits to the same file in the shared repository.
+Observe the error messages when trying to push and learn to solve conflicts with confidence!
+
+Exercise conflict solving on the GitLab Web UI and with the Git command line tools.
 
 
 :::::::::::::::: solution
@@ -45,8 +78,8 @@ See https://docs.gitlab.com/user/project/merge_requests/conflicts/
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- If the use of automated workflows is planned, it is convenient to work in a shared repository instead of using forks.
-- You will use branches to contribute to the shared repository (unless you are the owner or the maintainer).
-
+- Git is the tool to handle collaborative work.
+- Git can detect updates that are safe to integrate to your code, and it will ask you to decide in case of conflict.
+- Getting conflicts is not a bug but a feature of any code development work.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
