@@ -68,6 +68,21 @@ Only owners or maintainers can push directly to the default branch.
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::: spoiler
+
+### Pushing to a protected branch is not allowed
+
+You will see a message similar to this:
+
+```
+remote: GitLab: You are not allowed to push code to protected branches on this project.
+To gitlab.com:<project address>
+! [remote rejected] HEAD -> main (pre-receive hook declined)
+error: failed to push some refs to 'gitlab.com:<project address>'
+```
+
+::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ### Exercise 04.2 - contributing to a shared repository
@@ -77,30 +92,13 @@ Choose the roles so that the less experiences Git use becomes the owner.
 
 As an invited member, clone the repository to your local computer.
 
-Make an update in the code, then stage and commit it.
-Try what happens if you try to push to the main branch:
-
-  :::::::::::::::: spoiler
-
-  ### Pushing to a protected branch is not allowed
-
-  You will see a message similar to this:
-
-  ```
-  remote: GitLab: You are not allowed to push code to protected branches on this project.
-  To gitlab.com:<project address>
-  ! [remote rejected] HEAD -> main (pre-receive hook declined)
-  error: failed to push some refs to 'gitlab.com:<project address>'
-  ```
-
-  ::::::::::::::::::::::::
-
-Create a new branch instead.
+Create a new branch as you will not be able to push to the protected default branch.
 
 ```
 git checkout -b <branch name>
 ```
 
+Make an update in the code, then stage and commit it.
 Push your changes to the remote reposoitory. It will now appear as a merge request.
 
 As the owner, review the merge request but do not merge it yet as you will test it locally in the next exercise.
@@ -133,7 +131,7 @@ This will now appear as a merge request and the repository owner can review and 
 ![](fig/gitlab-merge-request.png)
 
 
-Browse through the tabs and see the changes. Do not merge it yet as we continue to the next exercise to test it locally
+Browse through the tabs and see the changes. Do not merge it yet as we continue to the next exercise to test it locally.
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
@@ -174,7 +172,7 @@ Checkout the branch with
 git checkout -b file4 origin/file4
 ```
 
-To test, you might run some code locally. 
+To test, you might run some code locally. If it looks OK, merge the merge request on the GitLab Web UI.
 You can delete this local branch after testing. You may need option `-D` to force it.
 
 

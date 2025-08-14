@@ -1,5 +1,5 @@
 ---
-title: "Keep things in order"
+title: "Keeping things in order"
 teaching: 10
 exercises: 20
 ---
@@ -19,13 +19,19 @@ exercises: 20
 
 ## Keeping things in order
 
-Whether a personal project of your own, or a shared repository, keeping track of things to do in issues is a good practice.
+Whether it's a personal project of your own or a shared repository, keeping track of tasks in issues is a good practice.
 
-They are helpful to inform all contributors of things missing, work in progress or discussion. They can also be used to report bugs.
+Issues help inform all contributors about missing features, work in progress, or topics for discussion. They can also be used to report bugs. GitLab lets you select from three different types of issues — Incident, Issue, or Task — but these only differ if you have defined separate templates to guide contributors in providing useful information. 
 
-Issues can be assigned to project members, and they can be closed by merge requests. The closing can be automated through merge requests by using `closes #<issue number>` in the commit message. Similary, ` ... #<issue number>` connects a commit to an issue, which helps tracking progress.
+Issues can be assigned to project members closed through merge requests. The [closing can be automated](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically) by using `closes #<issue number>` in the commit message. Similarly, `related to #<issue number>` links a commit to an issue, which helps tracking progress.
 
-Issues can be labeled based on their content, difficulty, urgency, or status of work in progress. These labels are helpful in search in large projects. 
+Issues can be labeled based on their content, difficulty, urgency, status of work in progress, or other properties. The labels can be defined for each project separately, and a default set of labels can be easily generated from **Manage -> Labels**. Labels are helpful in search in large projects.
+
+Issues can be viewed in an issue board, and be connected to a milestone. They can be set up **Plan -> Issue boards** and **Plan -> Milestones**.
+
+
+
+
 
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -75,6 +81,24 @@ In practice, for small projects, if you are the only contributor to your reposit
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ### Exercise 06.2
+
+Explore setting up and using an Issue board. In addition to the default "Open" and "Closed" lists, add some others, for example "In progress" and "Help needed".
+
+
+:::::::::::::::: solution
+
+Follow **Plan -> Issue boards**.
+
+To add lists, you will first have to define the corresponding labels from **Plan -> Issues**.
+
+
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Exercise 06.3
 
 Make a quick list of the work you have planned for your code. For real, not for the exercise repository we have been working on.
 
