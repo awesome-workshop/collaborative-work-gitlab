@@ -36,13 +36,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="cmscat-logo" alt="Lesson Description" src="assets/images/cmscat-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="cmscat-logo" alt="Lesson Description" src="assets/images/cmscat-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -1514,7 +1514,7 @@ repositories</h3>
 <div class="callout-content">
 <p>In practice, for small projects, if you are the only contributor to
 your repository you would close your own issues. Nevetheless, issue
-tracking is helpful even in that case.</p>
+tracking is still helpful.</p>
 </div>
 </div>
 </div>
@@ -1541,7 +1541,7 @@ progress” and “Help needed”.</p>
 <div class="accordion-body">
 <p>Follow <strong>Plan -&gt; Issue boards</strong>.</p>
 <p>To add lists, you will first have to define the corresponding labels
-from <strong>Plan -&gt; Issues</strong>.</p>
+in <strong>Plan -&gt; Issues</strong>.</p>
 </div>
 </div>
 </div>
@@ -1644,10 +1644,10 @@ tests, building applications, or deploying code. GitLab Runner is the
 application that executes these tasks on computing infrastructure.
 GitLab.com offers computing infrastructure for these tasks, and the CERN
 GitLab instance has access to dedicated infrastructure at CERN.</p>
-<p><code>yml</code> (or sometimes <code>yaml</code>) is quite commonly
-used language in various workflow definitions and fairly easy to read
-and understand. Keep in mind, however, that correct indentation is
-crucial, as YAML uses indentation to define structure. .</p>
+<p><code>yml</code> (or sometimes <code>yaml</code>) is a commonly used
+language in various workflow definitions and fairly easy to read and
+understand. Keep in mind, however, that correct indentation is crucial,
+as YAML uses indentation to define structure.</p>
 <p>We will first have a look at the template that GitLab suggests in the
 “Pipeline editor”.</p>
 <div id="exercise-07.1" class="callout challenge">
@@ -1670,7 +1670,7 @@ Pipelines</strong> to see it running.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>While inspecting, observe:</p>
 <ul>
@@ -1681,7 +1681,8 @@ Pipelines</strong> to see it running.</p>
 a tool that is then deployed</li>
 <li>scripts usually consist of shell commands (or scripts)</li>
 </ul>
-<p>Once done you will see something like this:</p>
+<p>Once done you will see something like this in <strong>Build -&gt;
+Pipelines</strong>:</p>
 <figure><img src="fig/gitlab-default-pipeline.png" class="figure mx-auto d-block"></figure>
 </div>
 </div>
@@ -1721,7 +1722,7 @@ script.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Type <code>echo $?</code> after a command on your terminal.</p>
 <p>Write a bash script <code>test.sh</code> with some commands in it.
@@ -1767,12 +1768,12 @@ we’ll get to the real work soon.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Replace the default <code>echo ...</code> and <code>sleep ...</code>
 commands in the <code>.gitlab-ci.yml</code> file with test commands of
-your own. You can also add a test script and run it.</p>
-<pre><code></code></pre>
+your own. You can also add a test script to your repository and run
+it.</p>
 </div>
 </div>
 </div>
@@ -1807,7 +1808,7 @@ copy of it in that job.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>You can use something similar to this:</p>
 <pre><code>  script:
