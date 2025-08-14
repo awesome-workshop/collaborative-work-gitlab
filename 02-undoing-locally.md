@@ -7,6 +7,7 @@ exercises: 20
 :::::::::::::::::::::::::::::::::::::: questions
 
 - Phew! Luckily I haven't pushed yet — how can I change my commit?
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
@@ -28,6 +29,8 @@ Sometimes, you might want to change a commit — for example:
 - Something just went wrong and you need to fix it.
 
 If you haven't pushed your commit yet, you only need to deal with your local repository — fixing things is straightforward at this stage.
+
+You can find an excellent summary of undoing and recovering in https://coderefinery.github.io/git-intro/recovering/
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

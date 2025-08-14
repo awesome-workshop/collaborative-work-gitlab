@@ -40,15 +40,18 @@ Excellent Git tutorials exist, the teaching approach varies.
   - a detailed walk-through of many Git commands
   - instructions for using remote Git repositories (e.g. [GitHub](https://www.w3schools.com/git/git_remote_getstarted.asp?remote=github), [GitLab](https://www.w3schools.com/git/git_remote_getstarted.asp?remote=gitlab))
 
-- CodeRefinery: https://coderefinery.github.io/git-intro/
+- CodeRefinery Git intro: https://coderefinery.github.io/git-intro/
   - good emphasis on "why"
   - starts by exploring an existing GitHub repository
+
+- CodeRefinery Collaborative work: https://coderefinery.github.io/git-collaborative/
+  - very well explained exercises for collaborative work on GitHub
 
 - HEP Software Foundation: https://hsf-training.github.io/analysis-essentials/git/README.html
   - starts by working hands-on on a local repository
   - explains CERN GitLab features
 
-## Where do we start?
+## Where do we start from?
 
 For this session, you should be familiar with the basic Git workflow of commits and pushes to the remote repository as listed in the setup instructions.
 
