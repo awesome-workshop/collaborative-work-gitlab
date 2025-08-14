@@ -29,9 +29,9 @@ are automated workflows that can be configured to run when new code is updated, 
 
 When developers push code to GitLab, they can define automated tasks in a `.gitlab-ci.yml` file. These tasks might include running tests, building applications, or deploying code. GitLab Runner is the application that executes these tasks on computing infrastructure. GitLab.com offers computing infrastructure for these tasks, and the CERN GitLab instance has access to dedicated infrastructure at CERN.
 
-`yml` (or sometimes `yaml`) is quite commonly used language in various workflow definitions and fairly easy to read and understand.
+`yml` (or sometimes `yaml`) is a commonly used language in various workflow definitions and fairly easy to read and understand.
 Keep in mind, however, that correct indentation is crucial, as YAML uses indentation to define structure.
-.
+
 
 We will first have a look at the template that GitLab suggests in the "Pipeline editor".
 
@@ -51,7 +51,7 @@ While inspecting, observe:
 - that this a typical software industry pipeline structure that builds a tool that is then deployed
 - scripts usually consist of shell commands (or scripts)
 
-Once done you will see something like this:
+Once done you will see something like this in **Build -> Pipelines**:
 
 ![](fig/gitlab-default-pipeline.png)
 
@@ -117,11 +117,8 @@ Keep it simple, we'll get to the real work soon.
 
 :::::::::::::::: solution
 
-Replace the default `echo ...` and `sleep ...` commands in the `.gitlab-ci.yml` file with test commands of your own. You can also add a test script and run it.
+Replace the default `echo ...` and `sleep ...` commands in the `.gitlab-ci.yml` file with test commands of your own. You can also add a test script to your repository and run it.
 
-```
-
-```
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::

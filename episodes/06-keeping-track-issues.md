@@ -73,7 +73,7 @@ https://docs.gitlab.com/user/project/issues/
 ::::::::::::::::::::::::::::::::::::: callout
 ### Issues are helpful also for single-contributor repositories
 
-In practice, for small projects, if you are the only contributor to your repository you would close your own issues. Nevetheless, issue tracking is helpful even in that case.
+In practice, for small projects, if you are the only contributor to your repository you would close your own issues. Nevetheless, issue tracking is still helpful.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -89,7 +89,7 @@ Explore setting up and using an Issue board. In addition to the default "Open" a
 
 Follow **Plan -> Issue boards**.
 
-To add lists, you will first have to define the corresponding labels from **Plan -> Issues**.
+To add lists, you will first have to define the corresponding labels in **Plan -> Issues**.
 
 
 
