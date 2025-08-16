@@ -409,7 +409,7 @@ the remote default branch with new files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>If you try to push, you will see a message like this:</p>
 <pre><code> ! [rejected]        main -&gt; main (fetch first)
@@ -464,7 +464,7 @@ files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Create a new branch, make edits, and push them to the shared
 repository with</p>
@@ -483,7 +483,11 @@ git pull</code></pre>
 <p>then moved to your working branch and rebased (after the local
 commit)</p>
 <pre><code>git checkout &lt;your branch name&gt;
-git rebase</code></pre>
+git rebase main</code></pre>
+<p>If there are not conflicts, i.e. edits to the same files, you would
+get a message:</p>
+<pre><code>First, rewinding head to replay your work on top of it...
+Applying: &lt;your commit message&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -497,8 +501,11 @@ git rebase</code></pre>
 <h3 class="callout-title">Exercise 05.3</h3>
 <div class="callout-content">
 <p>With your pair, make local edits to the same file in the shared
-repository. Observe the error messages when trying to merge and learn to
-solve conflicts with confidence!</p>
+repository.</p>
+<p>One of you edits a file in a local working branch. Meanwhile, the
+other one updates the same file in the remote default branch.</p>
+<p>Observe the error messages when trying to merge and learn to solve
+conflicts with confidence!</p>
 <p>Exercise conflict solving on the GitLab Web UI and with the Git
 command line tools.</p>
 </div>
@@ -509,8 +516,11 @@ command line tools.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
+<p>Do your edits (to the same file that has meanwhile been modified) in
+a working branch. Commit and push your branch to remote. Go to the
+branch in the GitLab Web UI and make a merge request.</p>
 <p>When trying to merge from the GitLab Web UI, you will see this</p>
 <figure><img src="../fig/gitlab-conflict-block.png" class="figure mx-auto d-block"></figure><p>Clicking on “Solve locally” gives instructions to copy-paste to solve
 them by fetching the branch locally.</p>
@@ -519,6 +529,67 @@ the two divergent versions or to edit inline</p>
 <figure><img src="../fig/gitlab-conflict-solve.png" class="figure mx-auto d-block"></figure><p>Update the file as needed, commit and merge.</p>
 <p>See also <a href="https://docs.gitlab.com/user/project/merge_requests/conflicts/" class="external-link uri">https://docs.gitlab.com/user/project/merge_requests/conflicts/</a></p>
 </div>
+</div>
+</div>
+</div>
+<div id="exercise-05.5" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-05.5" class="callout-inner">
+<h3 class="callout-title">Exercise 05.5</h3>
+<div class="callout-content">
+<p>If you have enjoyed resolving conflicts, go ahead with your exercise
+pair to make further simultaneous divergent changes to the directory
+structure and the files in the shared repository.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<p>See below!</p>
+</div>
+</div>
+</div>
+</div>
+<div id="avoid-modifying-the-same-files-simultaneously" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="avoid-modifying-the-same-files-simultaneously" class="callout-inner">
+<h3 class="callout-title">Avoid modifying the same files
+simultaneously!</h3>
+<div class="callout-content">
+<p>Small conflicts are easy to solve but big divergences are a pain.</p>
+<p>Organise the code and its development so that developers can work on
+separate files.</p>
+</div>
+</div>
+</div>
+<div id="avoid-big-long-lived-development-branches" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="avoid-big-long-lived-development-branches" class="callout-inner">
+<h3 class="callout-title">Avoid big, long-lived development
+branches!</h3>
+<div class="callout-content">
+<p>Read <a href="https://www.reddit.com/r/git/comments/1autxuy/comment/kr7cuul/" class="external-link">this
+instructive comment</a> on reddit:</p>
+<p><em>A lot of people use branches as a comfort mechanism. Hiding your
+code until it’s ‘perfect’ feels safer. Not having your code merged until
+someone has spent a load of time reviewing it line by line feels safer.
+The reality is getting changes out there means issues are found sooner,
+only reviewing changes in PRs delays opportunity to give early feedback
+on the approach or solution.</em></p>
 </div>
 </div>
 </div>
@@ -546,11 +617,14 @@ git pull</code></pre>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Git is the tool to handle collaborative work.</li>
-<li>Git can detect updates that are safe to integrate to your code, and
-it will ask you to decide in case of conflict.</li>
-<li>Getting conflicts is not a bug but a feature of any code development
-work.</li>
+<ul><li>Git is the tool for managing collaborative work on code.</li>
+<li>Git automatically integrates changes when it’s safe, and asks you to
+resolve things when there’s a conflict.</li>
+<li>Conflicts are not errors—they’re a normal part of working with
+shared code. But resolving them is an extra step for developers or
+maintainers.</li>
+<li>Merging your work into the default branch regularly prevents large
+conflicts and saves effort.</li>
 </ul></div>
 </div>
 </div>
