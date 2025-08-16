@@ -28,40 +28,114 @@ To keep the conflict on the code — not between people — we’ll practice bre
 
 ### Exercise 05.1
 
-Exercise with your pair to add content to you shared repository in two different branches. Learn how to update your working branch with contents of the updated remote.
+Exercise with your pair to add content to you shared repository in the default branch. You can do so if both of you have at least maintainer rights to the repository. Learn how to update your working area with contents of the updated remote.
 
-Use `git rebase`.
+One of you makes a new local edits. Meanwhile, the other one updates the remote default branch with new files.
+
 
 :::::::::::::::: solution
 
-See https://git-scm.com/docs/git-rebase
+If you try to push, you will see a message like this:
+
+```
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'gitlab.com:katilp/tutorial-test.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+A bare `git pull`, as suggested in the message most likely gives:
+
+```
+   2f8c69a..d32176b  main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+```
+
+Get the remote changes with
+
+```
+git pull --rebase
+```
+
+and then push your updates.
+
+Did this work in your case?
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
 
-::::::::::::::::::::::::::::::::::::: callout
-### Remember to update your local main/master branch!!!
+### Exercise 05.2
 
-Always remember to update your local default branch.
+Exercise with your pair to add content to you shared repository in two different branches. Learn how to update your working branch with contents of the updated remote.
+
+One of you makes a new local edits to a local working branch. Meanwhile, the other one updates the remote default branch with new files. 
+
+
+:::::::::::::::: solution
+
+Create a new branch, make edits, and push them to the shared repository with
+
+```
+git push origin <your branch name>
+```
+
+Then make a merge request from the GitLab Web UI.
+
+If the branches diverge you will see a message about it and you can click on "Rebase source branch" and accept
+
+![](fig/gitlab-diverged-branch-rebase.png)
+
+GitLab checks for conflicts 
+
+![](fig/gitlab-diverged-branch-check-conflicts.png)
+
+and once done gives
+
+![](fig/gitlab-diverged-branch-block.png)
+
+Follow the link, and if there are no conflicts, your can merge again.
+
+Note that you could have avoided this by rebasing before pushing. You could have refreshed your main:
 
 ```
 git checkout main
 git pull
 ```
 
-Do this every time when you start a new development.
+then moved to your working branch and rebased
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+```
+git checkout <your branch name>
+git rebase
+```
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Exercise 05.2
+### Exercise 05.3
 
 With your pair, make local edits to the same file in the shared repository.
-Observe the error messages when trying to push and learn to solve conflicts with confidence!
+Observe the error messages when trying to merge and learn to solve conflicts with confidence!
 
 Exercise conflict solving on the GitLab Web UI and with the Git command line tools.
 
@@ -75,6 +149,20 @@ See https://docs.gitlab.com/user/project/merge_requests/conflicts/
 
 
 
+
+::::::::::::::::::::::::::::::::::::: callout
+### Remember to update your local main/master branch!!!
+
+You will avoid a good amount of problems, if you remember to update your local default branch.
+
+```
+git checkout main
+git pull
+```
+
+Do this every time when you start a new development.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
