@@ -58,11 +58,13 @@ Do this every time when you start a new development.
 
 As the owner of the exercise repository, describe a desired new feature in an issue.
 Assign it to a developer (that's your exercise buddy).
-Let them make the changes suggested in the issue and push it in a branch.
+Let them make the changes suggested in the issue and push it in a branch with a commit message that automatically closes the issue once merged.
 Review the merge request and merge it if you are satisfied.
 
 
 :::::::::::::::: solution
+
+Use `closes #<issue number>` in the commit message to connect the merge request to the issue and to close it once merged.
 
 https://docs.gitlab.com/user/project/issues/
 
@@ -71,9 +73,9 @@ https://docs.gitlab.com/user/project/issues/
 
 
 ::::::::::::::::::::::::::::::::::::: callout
-### Issues are helpful also for single-contributor repositories
+### Issues are useful even in single-contributor repositories
 
-In practice, for small projects, if you are the only contributor to your repository you would close your own issues. Nevetheless, issue tracking is still helpful.
+If you’re the only contributor, you’ll just be closing your own issues. Still, tracking them helps you stay organized.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -88,6 +90,11 @@ Explore setting up and using an Issue board. In addition to the default "Open" a
 :::::::::::::::: solution
 
 Follow **Plan -> Issue boards**.
+
+You will see something like this:
+
+![](fig/gitlab-issue-board.png)
+
 
 To add lists, you will first have to define the corresponding labels in **Plan -> Issues**.
 

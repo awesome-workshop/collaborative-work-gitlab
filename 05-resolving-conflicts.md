@@ -109,7 +109,7 @@ and once done gives
 
 ![](fig/gitlab-diverged-branch-block.png)
 
-Follow the link, and if there are no conflicts, your can merge again.
+Follow the "Review changes" link, and if there are no conflicts, your can merge again.
 
 Note that you could have avoided this by rebasing before pushing. You could have refreshed your main:
 
@@ -175,7 +175,7 @@ See also https://docs.gitlab.com/user/project/merge_requests/conflicts/
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Exercise 05.5
+### Exercise 05.4
 
 If you have enjoyed resolving conflicts, go ahead with your exercise pair to make further simultaneous divergent changes to the directory structure and the files in the shared repository.
 
