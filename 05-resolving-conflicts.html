@@ -407,7 +407,7 @@ the remote default branch with new files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If you try to push, you will see a message like this:</p>
 <pre><code> ! [rejected]        main -&gt; main (fetch first)
@@ -462,7 +462,7 @@ files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Create a new branch, make edits, and push them to the shared
 repository with</p>
@@ -478,7 +478,8 @@ again.</p>
 could have refreshed your main:</p>
 <pre><code>git checkout main
 git pull</code></pre>
-<p>then moved to your working branch and rebased</p>
+<p>then moved to your working branch and rebased (after the local
+commit)</p>
 <pre><code>git checkout &lt;your branch name&gt;
 git rebase</code></pre>
 </div>
@@ -506,9 +507,15 @@ command line tools.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<p>See <a href="https://docs.gitlab.com/user/project/merge_requests/conflicts/" class="external-link uri">https://docs.gitlab.com/user/project/merge_requests/conflicts/</a></p>
+<p>When trying to merge from the GitLab Web UI, you will see this</p>
+<figure><img src="fig/gitlab-conflict-block.png" class="figure mx-auto d-block"></figure><p>Clicking on “Solve locally” gives instructions to copy-paste to solve
+them by fetching the branch locally.</p>
+<p>Clicking on “Resolve conflicts” gives an online tool to choose among
+the two divergent versions or to edit inline</p>
+<figure><img src="fig/gitlab-conflict-solve.png" class="figure mx-auto d-block"></figure><p>Update the file as needed, commit and merge.</p>
+<p>See also <a href="https://docs.gitlab.com/user/project/merge_requests/conflicts/" class="external-link uri">https://docs.gitlab.com/user/project/merge_requests/conflicts/</a></p>
 </div>
 </div>
 </div>
