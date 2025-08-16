@@ -122,7 +122,14 @@ then moved to your working branch and rebased (after the local commit)
 
 ```
 git checkout <your branch name>
-git rebase
+git rebase main
+```
+
+If there are not conflicts, i.e. edits to the same files, you would get a message:
+
+```
+First, rewinding head to replay your work on top of it...
+Applying: <your commit message>
 ```
 
 :::::::::::::::::::::::::
@@ -135,12 +142,18 @@ git rebase
 ### Exercise 05.3
 
 With your pair, make local edits to the same file in the shared repository.
+
+One of you edits a file in a local working branch. Meanwhile, the other one updates the same file in the remote default branch.
+
 Observe the error messages when trying to merge and learn to solve conflicts with confidence!
 
 Exercise conflict solving on the GitLab Web UI and with the Git command line tools.
 
 
 :::::::::::::::: solution
+
+Do your edits (to the same file that has meanwhile been modified) in a working branch.
+Commit and push your branch to remote. Go to the branch in the GitLab Web UI and make a merge request.
 
 When trying to merge from the GitLab Web UI, you will see this
 
@@ -156,10 +169,41 @@ Update the file as needed, commit and merge.
 
 See also https://docs.gitlab.com/user/project/merge_requests/conflicts/
 
+
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
 
+### Exercise 05.5
+
+If you have enjoyed resolving conflicts, go ahead with your exercise pair to make further simultaneous divergent changes to the directory structure and the files in the shared repository.
+
+
+:::::::::::::::: solution
+
+See below! 
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+### Avoid modifying the same files simultaneously!
+
+Small conflicts are easy to solve but big divergences are a pain.
+
+Organise the code and its development so that developers can work on separate files.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+### Avoid big, long-lived development branches!
+
+Read [this instructive comment](https://www.reddit.com/r/git/comments/1autxuy/comment/kr7cuul/) on reddit:
+
+*A lot of people use branches as a comfort mechanism. Hiding your code until it's 'perfect' feels safer. Not having your code merged until someone has spent a load of time reviewing it line by line feels safer. The reality is getting changes out there means issues are found sooner, only reviewing changes in PRs delays opportunity to give early feedback on the approach or solution.*
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -178,8 +222,9 @@ Do this every time when you start a new development.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Git is the tool to handle collaborative work.
-- Git can detect updates that are safe to integrate to your code, and it will ask you to decide in case of conflict.
-- Getting conflicts is not a bug but a feature of any code development work.
+- Git is the tool for managing collaborative work on code.
+- Git automatically integrates changes when it’s safe, and asks you to resolve things when there’s a conflict.
+- Conflicts are not errors—they’re a normal part of working with shared code. But resolving them is an extra step for developers or maintainers.
+- Merging your work into the default branch regularly prevents large conflicts and saves effort.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
