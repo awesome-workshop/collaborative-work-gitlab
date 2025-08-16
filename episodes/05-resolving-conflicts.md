@@ -118,7 +118,7 @@ git checkout main
 git pull
 ```
 
-then moved to your working branch and rebased
+then moved to your working branch and rebased (after the local commit)
 
 ```
 git checkout <your branch name>
@@ -142,7 +142,19 @@ Exercise conflict solving on the GitLab Web UI and with the Git command line too
 
 :::::::::::::::: solution
 
-See https://docs.gitlab.com/user/project/merge_requests/conflicts/
+When trying to merge from the GitLab Web UI, you will see this
+
+![](fig/gitlab-conflict-block.png)
+
+Clicking on "Solve locally" gives instructions to copy-paste to solve them by fetching the branch locally.
+
+Clicking on "Resolve conflicts" gives an online tool to choose among the two divergent versions or to edit inline
+
+![](fig/gitlab-conflict-solve.png)
+
+Update the file as needed, commit and merge.
+
+See also https://docs.gitlab.com/user/project/merge_requests/conflicts/
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
