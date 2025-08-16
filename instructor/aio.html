@@ -1110,7 +1110,7 @@ the shared repository.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>In the shared repository, go to Manage -&gt; Members.</p>
 <p>In the CERN GitLab instance, you can find all CERN accounts,
@@ -1129,7 +1129,7 @@ branch.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Pushing to a protected branch is not allowed </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>You will see a message similar to this:</p>
 <pre><code>remote: GitLab: You are not allowed to push code to protected branches on this project.
@@ -1169,7 +1169,7 @@ will test it locally in the next exercise.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Make the changes with the usual Git workflow. Note that if you have a
 local repository with the same name, you will need to define another
@@ -1214,7 +1214,7 @@ local branch.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Retreive the status of the remote repository so that you know the new
 branch name.</p>
@@ -1277,7 +1277,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-resolving-conflicts"><p>Content from <a href="05-resolving-conflicts.html">Resolving conflicts</a></p>
 <hr>
-<p>Last updated on 2025-08-14 |
+<p>Last updated on 2025-08-16 |
 
         <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/05-resolving-conflicts.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 50 minutes</p>
@@ -1329,9 +1329,11 @@ practice breaking things on purpose and then fixing them.</p>
 <h3 class="callout-title">Exercise 05.1</h3>
 <div class="callout-content">
 <p>Exercise with your pair to add content to you shared repository in
-two different branches. Learn how to update your working branch with
-contents of the updated remote.</p>
-<p>Use <code>git rebase</code>.</p>
+the default branch. You can do so if both of you have at least
+maintainer rights to the repository. Learn how to update your working
+area with contents of the updated remote.</p>
+<p>One of you makes a new local edits. Meanwhile, the other one updates
+the remote default branch with new files.</p>
 </div>
 </div>
 </div>
@@ -1342,7 +1344,106 @@ contents of the updated remote.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>See <a href="https://git-scm.com/docs/git-rebase" class="external-link uri">https://git-scm.com/docs/git-rebase</a></p>
+<p>If you try to push, you will see a message like this:</p>
+<pre><code> ! [rejected]        main -&gt; main (fetch first)
+error: failed to push some refs to 'gitlab.com:katilp/tutorial-test.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code></pre>
+<p>A bare <code>git pull</code>, as suggested in the message most likely
+gives:</p>
+<pre><code>   2f8c69a..d32176b  main       -&gt; origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.</code></pre>
+<p>Get the remote changes with</p>
+<pre><code>git pull --rebase</code></pre>
+<p>and then push your updates.</p>
+<p>Did this work in your case?</p>
+</div>
+</div>
+</div>
+</div>
+<div id="exercise-05.2" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-05.2" class="callout-inner">
+<h3 class="callout-title">Exercise 05.2</h3>
+<div class="callout-content">
+<p>Exercise with your pair to add content to you shared repository in
+two different branches. Learn how to update your working branch with
+contents of the updated remote.</p>
+<p>One of you makes a new local edits to a local working branch.
+Meanwhile, the other one updates the remote default branch with new
+files.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Create a new branch, make edits, and push them to the shared
+repository with</p>
+<pre><code>git push origin &lt;your branch name&gt;</code></pre>
+<p>Then make a merge request from the GitLab Web UI.</p>
+<p>If the branches diverge you will see a message about it and you can
+click on “Rebase source branch” and accept</p>
+<figure><img src="../fig/gitlab-diverged-branch-rebase.png" class="figure mx-auto d-block"></figure><p>GitLab checks for conflicts</p>
+<figure><img src="../fig/gitlab-diverged-branch-check-conflicts.png" class="figure mx-auto d-block"></figure><p>and once done gives</p>
+<figure><img src="../fig/gitlab-diverged-branch-block.png" class="figure mx-auto d-block"></figure><p>Follow the link, and if there are no conflicts, your can merge
+again.</p>
+<p>Note that you could have avoided this by rebasing before pushing. You
+could have refreshed your main:</p>
+<pre><code>git checkout main
+git pull</code></pre>
+<p>then moved to your working branch and rebased</p>
+<pre><code>git checkout &lt;your branch name&gt;
+git rebase</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="exercise-05.3" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-05.3" class="callout-inner">
+<h3 class="callout-title">Exercise 05.3</h3>
+<div class="callout-content">
+<p>With your pair, make local edits to the same file in the shared
+repository. Observe the error messages when trying to merge and learn to
+solve conflicts with confidence!</p>
+<p>Exercise conflict solving on the GitLab Web UI and with the Git
+command line tools.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<p>See <a href="https://docs.gitlab.com/user/project/merge_requests/conflicts/" class="external-link uri">https://docs.gitlab.com/user/project/merge_requests/conflicts/</a></p>
 </div>
 </div>
 </div>
@@ -1356,38 +1457,11 @@ contents of the updated remote.</p>
 <h3 class="callout-title">Remember to update your local main/master
 branch!!!</h3>
 <div class="callout-content">
-<p>Always remember to update your local default branch.</p>
+<p>You will avoid a good amount of problems, if you remember to update
+your local default branch.</p>
 <pre><code>git checkout main
 git pull</code></pre>
 <p>Do this every time when you start a new development.</p>
-</div>
-</div>
-</div>
-<div id="exercise-05.2" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="exercise-05.2" class="callout-inner">
-<h3 class="callout-title">Exercise 05.2</h3>
-<div class="callout-content">
-<p>With your pair, make local edits to the same file in the shared
-repository. Observe the error messages when trying to push and learn to
-solve conflicts with confidence!</p>
-<p>Exercise conflict solving on the GitLab Web UI and with the Git
-command line tools.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>See <a href="https://docs.gitlab.com/user/project/merge_requests/conflicts/" class="external-link uri">https://docs.gitlab.com/user/project/merge_requests/conflicts/</a></p>
-</div>
 </div>
 </div>
 </div>
@@ -1685,7 +1759,7 @@ Pipelines</strong> to see it running.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>While inspecting, observe:</p>
 <ul>
@@ -1737,7 +1811,7 @@ script.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Type <code>echo $?</code> after a command on your terminal.</p>
 <p>Write a bash script <code>test.sh</code> with some commands in it.
@@ -1783,7 +1857,7 @@ we’ll get to the real work soon.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Replace the default <code>echo ...</code> and <code>sleep ...</code>
 commands in the <code>.gitlab-ci.yml</code> file with test commands of
@@ -1823,7 +1897,7 @@ copy of it in that job.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>You can use something similar to this:</p>
 <pre><code>  script:
@@ -1913,9 +1987,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://awesome-workshop.github.io/collaborative-work-gitlab/instructor/aio.html",
   "identifier": "https://awesome-workshop.github.io/collaborative-work-gitlab/instructor/aio.html",
-  "dateCreated": "2025-08-14",
-  "dateModified": "2025-08-14",
-  "datePublished": "2025-08-14"
+  "dateCreated": "2025-08-16",
+  "dateModified": "2025-08-16",
+  "datePublished": "2025-08-16"
 }
 
   </script><script>
