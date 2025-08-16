@@ -26,13 +26,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="cmscat-logo" alt="Lesson Description" src="../assets/images/cmscat-logo.svg"><span class="badge text-bg-warning">
-          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
+        <img id="cmscat-logo" alt="Lesson Description" src="../assets/images/cmscat-logo.svg"><span class="badge text-bg-info">
+          <abbr title="This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
-              Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-circle" style="border-radius: 5px"></i>
+              Beta
             </a>
-            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
+            <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
           </abbr>
         </span>
 
@@ -343,7 +343,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Keeping things in order</h1>
-        <p>Last updated on 2025-08-14 |
+        <p>Last updated on 2025-08-16 |
 
         <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/06-keeping-track-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -430,8 +430,8 @@ git pull</code></pre>
 <p>As the owner of the exercise repository, describe a desired new
 feature in an issue. Assign it to a developer (that’s your exercise
 buddy). Let them make the changes suggested in the issue and push it in
-a branch. Review the merge request and merge it if you are
-satisfied.</p>
+a branch with a commit message that automatically closes the issue once
+merged. Review the merge request and merge it if you are satisfied.</p>
 </div>
 </div>
 </div>
@@ -442,23 +442,25 @@ satisfied.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
+<p>Use <code>closes #&lt;issue number&gt;</code> in the commit message
+to connect the merge request to the issue and to close it once
+merged.</p>
 <p><a href="https://docs.gitlab.com/user/project/issues/" class="external-link uri">https://docs.gitlab.com/user/project/issues/</a></p>
 </div>
 </div>
 </div>
 </div>
-<div id="issues-are-helpful-also-for-single-contributor-repositories" class="callout">
+<div id="issues-are-useful-even-in-single-contributor-repositories" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="issues-are-helpful-also-for-single-contributor-repositories" class="callout-inner">
-<h3 class="callout-title">Issues are helpful also for single-contributor
+<div id="issues-are-useful-even-in-single-contributor-repositories" class="callout-inner">
+<h3 class="callout-title">Issues are useful even in single-contributor
 repositories</h3>
 <div class="callout-content">
-<p>In practice, for small projects, if you are the only contributor to
-your repository you would close your own issues. Nevetheless, issue
-tracking is still helpful.</p>
+<p>If you’re the only contributor, you’ll just be closing your own
+issues. Still, tracking them helps you stay organized.</p>
 </div>
 </div>
 </div>
@@ -484,7 +486,8 @@ progress” and “Help needed”.</p>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Follow <strong>Plan -&gt; Issue boards</strong>.</p>
-<p>To add lists, you will first have to define the corresponding labels
+<p>You will see something like this:</p>
+<figure><img src="../fig/gitlab-issue-board.png" class="figure mx-auto d-block"></figure><p>To add lists, you will first have to define the corresponding labels
 in <strong>Plan -&gt; Issues</strong>.</p>
 </div>
 </div>
@@ -592,7 +595,7 @@ any links that you are not going to use.
   "url": "https://awesome-workshop.github.io/collaborative-work-gitlab/instructor/06-keeping-track-issues.html",
   "identifier": "https://awesome-workshop.github.io/collaborative-work-gitlab/instructor/06-keeping-track-issues.html",
   "dateCreated": "2025-08-16",
-  "dateModified": "2025-08-14",
+  "dateModified": "2025-08-16",
   "datePublished": "2025-08-16"
 }
 

@@ -36,13 +36,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="cmscat-logo" alt="Lesson Description" src="../assets/images/cmscat-logo.svg"><span class="badge text-bg-warning">
-          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
+        <img id="cmscat-logo" alt="Lesson Description" src="../assets/images/cmscat-logo.svg"><span class="badge text-bg-info">
+          <abbr title="This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
-              Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-circle" style="border-radius: 5px"></i>
+              Beta
             </a>
-            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
+            <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
           </abbr>
         </span>
 
@@ -563,7 +563,7 @@ GitLab.com it is <code>main</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>From the GitLab GUI, select “New project/repository”</p>
 <figure><img src="../fig/gitlab-new-repo.png" class="figure mx-auto d-block"></figure><p>Make it public and add README.</p>
@@ -634,7 +634,7 @@ changed in your commit?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>See:</p>
 <ul>
@@ -684,7 +684,7 @@ or in the <code>git status</code> output how to unstage a file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <pre><code>$ git reset --soft HEAD^
 $ git status
@@ -733,7 +733,7 @@ the commit with <code>git show</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>You can do the following updates (or use your own):</p>
 <pre><code>$ echo "some other junk" &gt; test.out
@@ -951,7 +951,7 @@ work, it is consider safer than <code>git reset</code> because
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>On your local Git area, find the last commit to undo.</p>
 <p>You will see something like this:</p>
@@ -1110,7 +1110,7 @@ the shared repository.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>In the shared repository, go to Manage -&gt; Members.</p>
 <p>In the CERN GitLab instance, you can find all CERN accounts,
@@ -1129,7 +1129,7 @@ branch.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Pushing to a protected branch is not allowed </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>You will see a message similar to this:</p>
 <pre><code>remote: GitLab: You are not allowed to push code to protected branches on this project.
@@ -1169,7 +1169,7 @@ will test it locally in the next exercise.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Make the changes with the usual Git workflow. Note that if you have a
 local repository with the same name, you will need to define another
@@ -1214,7 +1214,7 @@ local branch.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Retreive the status of the remote repository so that you know the new
 branch name.</p>
@@ -1342,7 +1342,7 @@ the remote default branch with new files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If you try to push, you will see a message like this:</p>
 <pre><code> ! [rejected]        main -&gt; main (fetch first)
@@ -1397,7 +1397,7 @@ files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Create a new branch, make edits, and push them to the shared
 repository with</p>
@@ -1407,8 +1407,8 @@ repository with</p>
 click on “Rebase source branch” and accept</p>
 <figure><img src="../fig/gitlab-diverged-branch-rebase.png" class="figure mx-auto d-block"></figure><p>GitLab checks for conflicts</p>
 <figure><img src="../fig/gitlab-diverged-branch-check-conflicts.png" class="figure mx-auto d-block"></figure><p>and once done gives</p>
-<figure><img src="../fig/gitlab-diverged-branch-block.png" class="figure mx-auto d-block"></figure><p>Follow the link, and if there are no conflicts, your can merge
-again.</p>
+<figure><img src="../fig/gitlab-diverged-branch-block.png" class="figure mx-auto d-block"></figure><p>Follow the “Review changes” link, and if there are no conflicts, your
+can merge again.</p>
 <p>Note that you could have avoided this by rebasing before pushing. You
 could have refreshed your main:</p>
 <pre><code>git checkout main
@@ -1449,7 +1449,7 @@ command line tools.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Do your edits (to the same file that has meanwhile been modified) in
 a working branch. Commit and push your branch to remote. Go to the
@@ -1465,13 +1465,13 @@ the two divergent versions or to edit inline</p>
 </div>
 </div>
 </div>
-<div id="exercise-05.5" class="callout challenge">
+<div id="exercise-05.4" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="exercise-05.5" class="callout-inner">
-<h3 class="callout-title">Exercise 05.5</h3>
+<div id="exercise-05.4" class="callout-inner">
+<h3 class="callout-title">Exercise 05.4</h3>
 <div class="callout-content">
 <p>If you have enjoyed resolving conflicts, go ahead with your exercise
 pair to make further simultaneous divergent changes to the directory
@@ -1484,7 +1484,7 @@ structure and the files in the shared repository.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>See below!</p>
 </div>
@@ -1569,7 +1569,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-06-keeping-track-issues"><p>Content from <a href="06-keeping-track-issues.html">Keeping things in order</a></p>
 <hr>
-<p>Last updated on 2025-08-14 |
+<p>Last updated on 2025-08-16 |
 
         <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/06-keeping-track-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1655,8 +1655,8 @@ git pull</code></pre>
 <p>As the owner of the exercise repository, describe a desired new
 feature in an issue. Assign it to a developer (that’s your exercise
 buddy). Let them make the changes suggested in the issue and push it in
-a branch. Review the merge request and merge it if you are
-satisfied.</p>
+a branch with a commit message that automatically closes the issue once
+merged. Review the merge request and merge it if you are satisfied.</p>
 </div>
 </div>
 </div>
@@ -1667,23 +1667,25 @@ satisfied.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
+<p>Use <code>closes #&lt;issue number&gt;</code> in the commit message
+to connect the merge request to the issue and to close it once
+merged.</p>
 <p><a href="https://docs.gitlab.com/user/project/issues/" class="external-link uri">https://docs.gitlab.com/user/project/issues/</a></p>
 </div>
 </div>
 </div>
 </div>
-<div id="issues-are-helpful-also-for-single-contributor-repositories" class="callout">
+<div id="issues-are-useful-even-in-single-contributor-repositories" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="issues-are-helpful-also-for-single-contributor-repositories" class="callout-inner">
-<h3 class="callout-title">Issues are helpful also for single-contributor
+<div id="issues-are-useful-even-in-single-contributor-repositories" class="callout-inner">
+<h3 class="callout-title">Issues are useful even in single-contributor
 repositories</h3>
 <div class="callout-content">
-<p>In practice, for small projects, if you are the only contributor to
-your repository you would close your own issues. Nevetheless, issue
-tracking is still helpful.</p>
+<p>If you’re the only contributor, you’ll just be closing your own
+issues. Still, tracking them helps you stay organized.</p>
 </div>
 </div>
 </div>
@@ -1709,7 +1711,8 @@ progress” and “Help needed”.</p>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Follow <strong>Plan -&gt; Issue boards</strong>.</p>
-<p>To add lists, you will first have to define the corresponding labels
+<p>You will see something like this:</p>
+<figure><img src="../fig/gitlab-issue-board.png" class="figure mx-auto d-block"></figure><p>To add lists, you will first have to define the corresponding labels
 in <strong>Plan -&gt; Issues</strong>.</p>
 </div>
 </div>
@@ -1840,7 +1843,7 @@ Pipelines</strong> to see it running.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>While inspecting, observe:</p>
 <ul>
@@ -1892,7 +1895,7 @@ script.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Type <code>echo $?</code> after a command on your terminal.</p>
 <p>Write a bash script <code>test.sh</code> with some commands in it.
@@ -1938,7 +1941,7 @@ we’ll get to the real work soon.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Replace the default <code>echo ...</code> and <code>sleep ...</code>
 commands in the <code>.gitlab-ci.yml</code> file with test commands of
@@ -1978,7 +1981,7 @@ copy of it in that job.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>You can use something similar to this:</p>
 <pre><code>  script:
