@@ -18,7 +18,7 @@ exercises: 20
 
 ## Local commits?
 
-Most Git tutorials start by explaining how to make local commits, track them, and use them during development on your local machine. Good habit if you do!
+Most Git tutorials start by explaining how to make local commits, track them, and use them during development on your local machine. You would have a neat list of all your commits with clear and concise commit messages. Good habit if you do!
 
 However, in practice, many of us only run `git commit` right before pushing our code to the remote repository.
 
@@ -36,11 +36,11 @@ You can find an excellent summary of undoing and recovering in https://coderefin
 
 ### Exercise 02.1
 
-Create a new repository in the GitLab area. Note that in the CERN GitLab instance, the default branch name is `master` while in GitLab.com it is `main`.
+Create a new repository in the GitLab area. 
 
 Clone it locally and create some files.
 
-Commit them.
+Commit them to the remote respository.
 
 :::::::::::::::: solution
 
@@ -322,7 +322,7 @@ Update my work
 
 Not familiar with NANO? Here's a cheatsheet if needed: https://www.nano-editor.org/dist/latest/cheatsheet.html
 
-Or change it as instructed in the [git config documentation](https://git-scm.com/book/en/v2/Appendix-C:-Git-Commands-Setup-and-Config).
+Or change the default editor as instructed in the [git config documentation](https://git-scm.com/book/en/v2/Appendix-C:-Git-Commands-Setup-and-Config).
 
 If you are happy with the commit message, just hit Ctrl-X to exit and you will get a confirmation message of your commit. If you want to change the message, just edit it, hit Ctrl-X and confirm with Y.
 
