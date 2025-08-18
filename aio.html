@@ -486,7 +486,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-undoing-locally"><p>Content from <a href="02-undoing-locally.html">Undoing things locally</a></p>
 <hr>
-<p>Last updated on 2025-08-17 |
+<p>Last updated on 2025-08-18 |
 
         <a href="https://github.com/awesome-workshop/collaborative-work-gitlab/edit/main/episodes/02-undoing-locally.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -549,7 +549,7 @@ stage.</p>
 <div class="callout-content">
 <p>Create a new repository in the GitLab area.</p>
 <p>Clone it locally and create some files.</p>
-<p>Commit them to the remote respository.</p>
+<p>Commit them in the local respository.</p>
 </div>
 </div>
 </div>
@@ -1103,7 +1103,7 @@ the shared repository.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>In the shared repository, go to Manage -&gt; Members.</p>
 <p>In the CERN GitLab instance, you can find all CERN accounts,
@@ -1122,7 +1122,7 @@ branch.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Pushing to a protected branch is not allowed </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>You will see a message similar to this:</p>
 <pre><code>remote: GitLab: You are not allowed to push code to protected branches on this project.
@@ -1162,7 +1162,7 @@ will test it locally in the next exercise.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Make the changes with the usual Git workflow. Note that if you have a
 local repository with the same name, you will need to define another
@@ -1207,7 +1207,7 @@ local branch.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Retreive the status of the remote repository so that you know the new
 branch name.</p>
@@ -1334,7 +1334,7 @@ the remote default branch with new files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If you try to push, you will see a message like this:</p>
 <pre><code> ! [rejected]        main -&gt; main (fetch first)
@@ -1389,7 +1389,7 @@ files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Create a new branch, make edits, and push them to the shared
 repository with</p>
@@ -1441,7 +1441,7 @@ command line tools.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Do your edits (to the same file that has meanwhile been modified) in
 a working branch. Commit and push your branch to remote. Go to the
@@ -1476,7 +1476,7 @@ structure and the files in the shared repository.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>See below!</p>
 </div>
@@ -1656,7 +1656,7 @@ merged. Review the merge request and merge it if you are satisfied.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Use <code>closes #&lt;issue number&gt;</code> in the commit message
 to connect the merge request to the issue and to close it once
@@ -1699,7 +1699,7 @@ progress” and “Help needed”.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Follow <strong>Plan -&gt; Issue boards</strong>.</p>
 <p>You will see something like this:</p>
@@ -1728,7 +1728,7 @@ real, not for the exercise repository we have been working on.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>That’s on you and we come back to this at the end of the day!</p>
 </div>
@@ -2061,9 +2061,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://awesome-workshop.github.io/collaborative-work-gitlab/aio.html",
   "identifier": "https://awesome-workshop.github.io/collaborative-work-gitlab/aio.html",
-  "dateCreated": "2025-08-17",
-  "dateModified": "2025-08-17",
-  "datePublished": "2025-08-17"
+  "dateCreated": "2025-08-18",
+  "dateModified": "2025-08-18",
+  "datePublished": "2025-08-18"
 }
 
   </script><script>
