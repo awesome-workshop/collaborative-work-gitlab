@@ -40,7 +40,7 @@ Create a new repository in the GitLab area.
 
 Clone it locally and create some files.
 
-Commit them to the remote respository.
+Commit them in the local respository.
 
 :::::::::::::::: solution
 
