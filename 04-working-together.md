@@ -126,7 +126,7 @@ git commit -m "Describe your updates"
 git push origin new-feature 
 ```
 
-This will now appear as a merge request and the repository owner can review and merge it.
+Follow the link to make a merge request and the repository owner can review and merge it.
 
 ![](fig/gitlab-merge-request.png)
 
