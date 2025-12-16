@@ -53,7 +53,7 @@ While inspecting, observe:
 
 Once done you will see something like this in **Build -> Pipelines**:
 
-![](fig/gitlab-default-pipeline.png)
+![Gitlab CI/CD pipeline view](fig/gitlab-default-pipeline.png)
 
 
 :::::::::::::::::::::::::
@@ -158,11 +158,11 @@ You can check in the subsequent job scripts that what you write in the `outputs`
 
 You can download the artifacts from the Pipeline view:
 
-![](fig/gitlab-download-artifacts.png)
+![Gitlab download artifact dropdown menu from the pipeline view](fig/gitlab-download-artifacts.png)
 
 or browse them by clicking on a single job, and following "Browse":
 
-![](fig/gitlab-browse-artifacts.png)
+![Gitlab pipeline job output with Browse artifact button](fig/gitlab-browse-artifacts.png)
 
 
 

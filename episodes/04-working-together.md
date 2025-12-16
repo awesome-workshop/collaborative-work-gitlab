@@ -56,7 +56,7 @@ In the shared repository, go to Manage -> Members.
 
 In the CERN GitLab instance, you can find all CERN accounts, including service accounts:
 
-![](fig/gitlab-invite-members.png)
+![CERN gitlab invite members view](fig/gitlab-invite-members.png)
 
 
 Learn about the roles.
@@ -128,7 +128,7 @@ git push origin new-feature
 
 Follow the link to make a merge request and the repository owner can review and merge it.
 
-![](fig/gitlab-merge-request.png)
+![Gitlab merge request view](fig/gitlab-merge-request.png)
 
 
 Browse through the tabs and see the changes. Do not merge it yet as we continue to the next exercise to test it locally.

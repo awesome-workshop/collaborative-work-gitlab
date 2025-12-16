@@ -46,7 +46,7 @@ Commit them in the local respository.
 
 From the GitLab GUI, select "New project/repository"
 
-![](fig/gitlab-new-repo.png)
+![Gitlab new repo dropdow menu](fig/gitlab-new-repo.png)
 
 Make it public and add README.
 
@@ -59,7 +59,7 @@ cd <your repository>
 
 Note that you can copy the repository address from the GitLab web GUI:
 
-![](fig/gitlab-clone.png)
+![Gitlab clone code view](fig/gitlab-clone.png)
 
 Create some files, for example:
 
