@@ -93,7 +93,7 @@ Follow **Plan -> Issue boards**.
 
 You will see something like this:
 
-![](fig/gitlab-issue-board.png)
+![Gitlab issue board view](fig/gitlab-issue-board.png)
 
 
 To add lists, you will first have to define the corresponding labels in **Plan -> Issues**.

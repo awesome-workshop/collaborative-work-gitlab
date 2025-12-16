@@ -99,15 +99,15 @@ Then make a merge request from the GitLab Web UI.
 
 If the branches diverge you will see a message about it and you can click on "Rebase source branch" and accept
 
-![](fig/gitlab-diverged-branch-rebase.png)
+![Gitlab diverging branch view](fig/gitlab-diverged-branch-rebase.png)
 
 GitLab checks for conflicts 
 
-![](fig/gitlab-diverged-branch-check-conflicts.png)
+![Gitlab checking conflicts messgae](fig/gitlab-diverged-branch-check-conflicts.png)
 
 and once done gives
 
-![](fig/gitlab-diverged-branch-block.png)
+![Gitlab merge blocked - review changes message](fig/gitlab-diverged-branch-block.png)
 
 Follow the "Review changes" link, and if there are no conflicts, your can merge again.
 
@@ -157,13 +157,13 @@ Commit and push your branch to remote. Go to the branch in the GitLab Web UI and
 
 When trying to merge from the GitLab Web UI, you will see this
 
-![](fig/gitlab-conflict-block.png)
+![Gitlab merge block - resolve message](fig/gitlab-conflict-block.png)
 
 Clicking on "Solve locally" gives instructions to copy-paste to solve them by fetching the branch locally.
 
 Clicking on "Resolve conflicts" gives an online tool to choose among the two divergent versions or to edit inline
 
-![](fig/gitlab-conflict-solve.png)
+![Gitlab resolve conflicts view](fig/gitlab-conflict-solve.png)
 
 Update the file as needed, commit and merge.
 

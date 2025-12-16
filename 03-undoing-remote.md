@@ -55,7 +55,7 @@ To gitlab.com:katilp/tutorial-test.git
 
 You can see your separate commits listed in "History" on the GitLab Web UI, even if you pushed only once:
 
-![](fig/gitlab-commit-history.png)
+![Gitlab commit history](fig/gitlab-commit-history.png)
 
 You can browse files on the Web UI, or inspect them in your local area with `git show <commit hash>` (both short and long forms of the commit hash work).
 
